@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-@media only screen {
+@media only screen and (min-width: 600px) {
   .card {
     flex-direction: row-reverse;
   }
@@ -38,7 +38,7 @@ body {
   }
 }
 
-@media only screen {
+@media only screen and (max-height: 840px) {
   .card {
     flex-direction: row-reverse;
   }
