@@ -25,6 +25,7 @@ body {
   padding: 1em;
   overflow: hidden;
   overflow-y: auto;
+  padding-top: 15vh;
 }
 
 
@@ -43,7 +44,6 @@ body {
 }
 
 .text {
-  margin-top: 15vh;
   padding: 1em;
 }
 
