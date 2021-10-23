@@ -114,4 +114,5 @@ a.iprodev:hover {
 .congraz {
   height: 20vh;
   background-image: url(img/photo_2021-10-17_21-45-10.png);
+  background-position-x: right;
 }
