@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   overflow-y: auto;
   padding-top: 15vh;
+  min-height: fit-content;
 }
 
 
