@@ -25,6 +25,7 @@ body {
   align-items: center;
   padding: 1em;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 
@@ -32,26 +33,12 @@ body {
   .card {
     flex-direction: row-reverse;
   }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
 }
 
 @media only screen and (max-height: 140px) {
   .card {
     flex-direction: row-reverse;
   }
-  .card img.birthday {
-    width: 100%;
-    max-width: 50vw;
-    max-height: unset;
-  }
-}
-
-img.birthday {
-  max-height: 40vh;
 }
 
 .text {
