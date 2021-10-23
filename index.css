@@ -24,28 +24,24 @@ body {
   align-items: center;
   padding: 1em;
   overflow: hidden;
-  overflow-y: auto;
-  padding-top: 15vh;
-  min-height: fit-content;
 }
 
 
 @media only screen and (min-width: 1000px) {
   .card {
     flex-direction: row-reverse;
-    overflow-y: auto;
   }
 }
 
 @media only screen and (max-height: 140px) {
   .card {
     flex-direction: row-reverse;
-    overflow-y: auto;
   }
 }
 
 .text {
   padding: 1em;
+  overflow-y: auto;
 }
 
 h1 {
