@@ -1,53 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./index.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
-  <title>LAUREATAAAA</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulazioni My Love 💗</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+
 </head>
+
 <body>
-  <audio controls autoplay>
-    <source src="music/PewDiePie-Congratulation-_-AllNaijaEntertainment.com_.mp3" type="audio/mp3">
-  </audio>
-  <div class="card">
-    <canvas height="1" id="confetti" width="1">
-      <a class="iprodev" href="http://iprodev.com" target="_blank">iprodev.com</a>
-      <script src="script.js"></script>
-    </canvas>
-    <div class="text">
-      <div class="congraz">
-        <h1>Congratulazioni!!!</h1>
-      </div>
-      <p>In questo giorno alquanto speciale vogliamo congratularci con te e ringraziarti per questi 5 anni insieme.
-        <br><br>
-        Vorremmo riportare, infatti, alcune menzioni speciali:
-        <br><br>
-        Grazie per i tuoi appunti, hanno salvato la pelle a molti di noi
-        <br><br>
-        Grazie per i viaggi in macchina, aggiungevano un tocco di spensieratezza mentre si viaggiava inesorabilmente verso una nuova giornata universitaria
-        <br><br>
-        Grazie per la  tua passione per i Pokemon è bello vederti felice.
-        E il mondo non è mai stato così in pace come quando è uscito Pokemon Go
-        <br><br>
-        Grazie per gli scarabocchi sugli appunti durante le lezioni, rimarranno con noi per sempre e saranno un bel ricordo di te 🐟
-        <br><br>
-        Grazie per tutte le volte che (anche involontariamente) ci hai fatto sorridere, come tutte le tue sfortune, dal dito rotto, alla lingua tagliata (la sessione invernale non era il tuo forte #Murphy)
-        <br><br>
-        Grazie per la tua passione per il flauto, ci hai ricordato che non è mai troppo tardi
-        <br><br>
-        Grazie per questo viaggio insieme, per questi 5 anni ti auguriamo che sia solo l'inizio di una grande avventura
-        <br><br>
-        Congratulazioni Onorevole Dottoressa, spicca il volo dove nessuno di noi andrà mai.</p>
-        <br><br>
-      <p class="muted">- The CS Gang & Marika</p>
-    </div>
-    <div class="space"></div>
-  </div>
-  <audio controls autoplay>
-    <source src="music/2021-04-02 17-05-56_Trim.mp3" type="audio/mp3">
-  </audio>
+    <section>
+        <div class="skewed">
+            <div id="congrText">
+                <h1>CONGRATULAZIONI</h1>
+                <h1>DOTTORESSA</h1>
+                <h1>❤️</h1>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section>
+        <h1>Inserisci la chiave segreta</h1>
+        <form id="form">
+            <div class="mb-3">
+                <input class="form-control border-dark btn-outline-dark" id="exampleFormControlInput1" placeholder="">
+            </div>
+            <div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <button type="submit" class="btn btn-outline-dark">INVIA</button>
+                </div>
+                <br><br>
+                <a class="popup" href="#" onclick="popup()">Chiave segreta?
+                    <span class="popuptext" id="myPopup">Dovresti controllare in una delle macchine... C'e' qualcosa per te!</span>
+                </a>
+            </div>
+        </form>
+
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <script>
+        function popup() {
+            var popup = document.getElementById("myPopup");
+            popup.classList.toggle("show");
+        }
+
+        function logSubmit(event) {
+            console.log(`Form Submitted! Time stamp: ${event.timeStamp}`);
+            const insertedKey = document.getElementById("exampleFormControlInput1");
+            if(insertedKey.value.toLowerCase() === correctKey){
+                console.log("correct!");
+                location.replace("location.html");
+            } else {
+
+                console.log("ERROR!");
+                location.replace("error.html");
+            }
+            event.preventDefault();
+        }
+
+        const form = document.getElementById("form");
+        form.addEventListener('submit', logSubmit);
+
+
+        const correctKey = "pilo icrl? aiei tr mteael";
+    </script>
 </body>
+
 </html>
