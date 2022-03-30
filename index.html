@@ -63,8 +63,9 @@
             if(insertedKey.value.toLowerCase() === correctKey){
                 console.log("correct!");
                 location.replace("location.html");
+            } else if(insertedKey.value.toLowerCase() === anagramKey){
+                window.alert("Mmmh queste lettere... sembra un anagramma!");
             } else {
-
                 console.log("ERROR!");
                 location.replace("error.html");
             }
@@ -74,8 +75,8 @@
         const form = document.getElementById("form");
         form.addEventListener('submit', logSubmit);
 
-
         const correctKey = "cereali";
+        const anagramKey = "rmapi li atlet o i racilee?";
     </script>
 </body>
 
