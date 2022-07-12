@@ -1,0 +1,162 @@
+@font-face {
+    font-family: roboto-condensed;
+    src: url('fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: press-start-2p;
+    src: url('fonts/Press_Start_2P/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: finlandica;
+    src: url('fonts/Finlandica/static/Finlandica-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: nova-square;
+    src: url('fonts/Nova_Square/NovaSquare-Regular.ttf') format('truetype');
+}
+
+
+#container {
+    height: max-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: radial-gradient(ellipse at center, #326F91 0%, rgb(0, 17, 20) 100%);
+}
+
+#name-title {
+    height: fit-content;
+    width: fit-content;
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    font-family: press-start-2p;
+    color: white;
+}
+
+#name-title>h1 {
+    font-size: 50px;
+}
+
+
+
+#portrait {
+    height: 25vh;
+}
+
+img {
+    height: 100%;
+    width: auto;
+}
+
+#social-links {
+    width: 100%;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    margin-top: -10px;
+    margin-bottom: 2px;
+
+    color: white;
+}
+
+.social {
+    margin: 15px;
+    color: white;
+}
+
+.social:hover {
+    color: #f5b800;
+}
+
+.social>.fa:hover {
+    font-size: 2.5em;
+    transition: .2s ease-out;
+}
+
+hr.round {
+    width: 90vw;
+    margin-top: 2vh;
+    border-top: 8px solid white;
+    border-radius: 5px;
+}
+
+#description {
+    width: 80vw;
+    height: fit-content;
+    color: white;
+    font-family: finlandica;
+    font-size: 30px;
+    text-align: center;
+}
+
+.show-buttons {
+    width: 100%;
+    display: flexbox;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    margin-top: -10px;
+    margin-bottom: 2px;
+}
+
+
+.show-btn {
+    margin: 20px;
+    background: none;
+    border-radius: 25px;
+    border: 2px solid #ffffff;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-family: finlandica;
+}
+
+.show-btn:hover {
+    background-color: #36868E;
+}
+
+/* ------------------------------ projects ------------------------------ */
+
+#current-page {
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-title {
+    color: white;
+    font-family: finlandica;
+}
+
+#projects-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.proj-btn {
+    margin: 20px;
+    background: none;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-family: finlandica;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.proj-btn:hover {
+    background-color: #36868E;
+}

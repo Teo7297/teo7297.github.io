@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Matteo Cavagnino</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles/style.css'>
+    <script src='scripts/main.js'></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+        <div id="name-title">
+            <h1>Matteo Cavagnino</h1>
+        </div>
+
+        <div id="portrait">
+            <img src="img/Portrait.png" alt="Portrait image">
+        </div>
+
+        <div id="social-links">
+            <a class="social" href="mailto:matteo.cavagnino.mc@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+            <a class="social" href="https://github.com/Teo7297" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+            <a class="social" href="https://www.linkedin.com/in/matteo-cavagnino-25a677185/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
+            <a class="social" href="/files/CavagninoMatteoCV.pdf" download target="_blank"><i class="fa fa-solid fa-file-arrow-down fa-2x"></i></a>
+
+        </div>
+
+        <div>
+            <hr class="round">
+        </div>
+
+        <div id="description">
+            <p>
+                Hi, thanks for your time! My name is Matteo; my strong passion for programming and videogames keeps
+                driving me toward my dream: to create awesome experiences for people to enjoy!
+            </p>
+        </div>
+
+        <div>
+            <hr class="round">
+        </div>
+
+        <section class="show-buttons">
+            <div class="button_container">
+                <button onclick="buttonSelected(this)" id="projects-Button" class="show-btn">Projects</button>
+                <button onclick="buttonSelected(this)" id="career-Button" class="show-btn">Career</button>
+                <button onclick="buttonSelected(this)" id="skills-Button" class="show-btn">Skills</button>
+                <button onclick="buttonSelected(this)" id="research-Button" class="show-btn">Research</button>
+            </div>
+        </section>
+
+        <section id="current-page">
+            <h2 id="section-title">Personal Projects</h2>
+            <div id="projects-container">
+                <button onclick="" id="angelwrath" class="proj-btn" style="background-image: url('img/IRA_thumb.png');"></button>
+                <button onclick="" id="RPG" class="proj-btn" style="background-image: url('img/RPG_thumb.png');"></button>
+                <button onclick="" id="skala" class="proj-btn" style="background-image: url('img/SKALA_thumb.png');"></button>
+                <button onclick="" id="openGL" class="proj-btn">OpenGL</button>
+                <button onclick="" id="PHero" class="proj-btn" style="background-image: url('img/PHero_thumb.png');"></button>
+                <button onclick="" id="Movie-store" class="proj-btn" style="background-image: url('img/MStore_thumb.png');"></button>
+                <button onclick="" id="LiraRecognizer" class="proj-btn" style="background-image: url('img/Lira_thumb.png');"></button>
+            </div>
+        </section>
+
+        <section id="current-project">
+            <div id="proj-title"></div>
+            <div id="proj-desc"></div>
+            <div id="proj-media"></div>
+            <div id="proj-contributors"></div>
+        </section>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d9a4c02119.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
