@@ -1,19 +1,7 @@
-let current_clicked;
 
-function buttonSelected(element) {
-    if (current_clicked != null)
-        current_clicked.style.background = 'none';
-    if (element != current_clicked) {
-        current_clicked = element;
-        element.style.background = '#3A9D8B';
-    } else {
-        current_clicked = null;
-    }
-}
 
 let project = {
     "title": "",
-    "thumbnail": "",
     "link": "",
     "descriprion": "",
     "tech_stack": [],
@@ -63,7 +51,7 @@ let RPG = Object.assign({}, project);
 
 RPG.title = "3D Learning RPG";
 
-RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks. Most of the project was conducted following lessons from the courses provided on " + "<a>www.gamedev.tv</a>" + " website.";
+RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks. Most of the project was conducted following lessons from the courses provided on www.gamedev.tv website.";
 
 RPG.link = "";
 
@@ -78,7 +66,6 @@ RPG.tech_stack = [
 
 RPG.contributors = [
     "Cavagnino Matteo",
-    "The GameDev Team behind the course lessons"
 ];
 
 ////////////////////////////////////////////////////////////////////////
@@ -115,7 +102,7 @@ let openGL = Object.assign({}, project);
 
 openGL.title = "OpenGL Learning Project";
 
-openGL.descriprion = "This project is the result of following a public course pubilished on YouTube by TheCherno with the goal of learning the basics of computer graphics and OpenGL. I applied many core concepts of computer graphics like vertices, vertex buffers, index buffers, vertex arrays, shaders, materials, textures, MVP matrices and batch rendering. This project mainly contains basics about the above topics and is under current active development.";
+openGL.descriprion = "This project is the result of a learning path that included a few publicly available courses with the goal of learning the basics of computer graphics and OpenGL. I applied many core concepts of computer graphics like vertices, vertex buffers, index buffers, vertex arrays, shaders, materials, textures, MVP matrices and batch rendering. This project mainly contains basics about the above topics and is under current active development.";
 
 openGL.link = "https://github.com/Teo7297/OpenGL-Learning";
 
@@ -162,7 +149,7 @@ movie_store.title = "Movie Store";
 
 movie_store.link = "";
 
-movie_store.descriprion = "Movie Store is a browser application that resembles how an online move store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
+movie_store.descriprion = "Movie Store is a browser application that resembles how an online movie store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
 
 movie_store.tech_stack = [
     "VSCode",
@@ -198,14 +185,225 @@ noteRec.tech_stack = [
 ];
 
 
+let projects = {
+    "angelwrath": angelwrath,
+    "RPG": RPG,
+    "skala": skala,
+    "openGL": openGL,
+    "PHero": piano_hero,
+    "Movie-store": movie_store,
+    "LiraRecognizer": noteRec
+};
+
+////////////////////////////////////////////////////////////////////////
+
+// career
+let career = {
+    "company": "",
+    "location": "",
+    "position": "",
+    "duration": ""
+};
+
+let careerHTML1 = '<div><hr class="thin"></div><h2>Company</h2><div>';
+let careerHTML2 = "</div><br><br><h3>Location</h3><div>";
+let careerHTML3 = "</div><br><br><h3>Job position</h3><div>";
+let careerHTML4 = "</div><br><br><h3>Duration</h3><div>";
+let careerHTML5 = '</div><div><hr class="thin"></div>';
 
 
-let projects = [
-    angelwrath,
-    RPG,
-    skala,
-    openGL,
-    piano_hero,
-    movie_store,
-    noteRec,
-];
+let alterna = Object.assign({}, career);
+alterna.company = "Altea Federation - Alterna";
+alterna.location = "Italy, Lainate(MI)";
+alterna.position = "Software developer - internship";
+alterna.duration = "4 months (May 2021 - September 2021)";
+
+
+let careers = [alterna,];
+
+////////////////////////////////////////////////////////////////////////
+
+// skills
+let skill = {
+    "name": "",
+    "level": 0
+};
+
+let java = Object.assign({}, skill);
+java.name = "Java";
+java.level = 88;
+let python = Object.assign({}, skill);
+python.name = "Python";
+python.level = 75;
+let javascript = Object.assign({}, skill);
+javascript.name = "JavaScript";
+javascript.level = 65;
+let css = Object.assign({}, skill);
+css.name = "CSS";
+css.level = 60;
+let html = Object.assign({}, skill);
+html.name = "HTML5";
+html.level = 68;
+let csharp = Object.assign({}, skill);
+csharp.name = "C#";
+csharp.level = 75;
+let unity = Object.assign({}, skill);
+unity.name = "Unity";
+unity.level = 75;
+let c = Object.assign({}, skill);
+c.name = "C";
+c.level = 30;
+let cpp = Object.assign({}, skill);
+cpp.name = "C++";
+cpp.level = 50;
+let opengl = Object.assign({}, skill);
+opengl.name = "OpenGL";
+opengl.level = 40;
+let cmake = Object.assign({}, skill);
+cmake.name = "CMake";
+cmake.level = 60;
+let vscode = Object.assign({}, skill);
+vscode.name = "VSCode";
+vscode.level = 90;
+let vs = Object.assign({}, skill);
+vs.name = "Visual Studio";
+vs.level = 70;
+let english = Object.assign({}, skill);
+english.name = "English";
+english.level = 85;
+let italian = Object.assign({}, skill);
+italian.name = "Italian";
+italian.level = 96;
+let plsql = Object.assign({}, skill);
+plsql.name = "PL/SQL";
+plsql.level = "65";
+let mongoDB = Object.assign({}, skill);
+mongoDB.name = "MongoDB";
+mongoDB.level = "60";
+let git = Object.assign({}, skill);
+git.name = "GIT";
+git.level = "70";
+
+let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, vscode, vs, english, italian, plsql, mongoDB, git];
+
+
+////////////////////////////////////////////////////////////////////////
+
+// research
+
+let research = {
+    "title": "",
+    "date": "",
+    "link": ""
+};
+
+let notyet = Object.assign({}, research);
+notyet.title = "Research thesis under current development";
+
+
+let researches = [notyet,];
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+let current_project;
+
+function showProject(btn) {
+
+    let p = projects[btn.id];
+
+    if (current_project != null) {
+        current_project.style.transform = "";
+        if (current_project.id == btn.id) {
+            current_project = null;
+            document.getElementById("current-project").style.display = 'none';
+            return;
+        }
+    }
+
+    resetProjectSection();
+
+    current_project = btn;
+
+    current_project.style.transform = "scale(1.5)";
+
+    document.getElementById("current-project").style.display = 'flex';
+
+
+    document.getElementById("proj-title").innerText = p.title;
+    document.getElementById("proj-link").href = p.link;
+    document.getElementById("proj-link").innerText = p.link;
+
+    p.tech_stack.forEach(element => {
+        document.getElementById("proj-tech").innerHTML += '<div>' + element + '</div>';
+    });
+    document.getElementById("proj-desc").innerText = p.descriprion;
+
+    p.contributors.forEach(element => {
+        document.getElementById("proj-contributors").innerHTML += '<div>' + element + '</div>';
+    });
+
+    window.scroll(0, getOffset(document.getElementById("project")).top);
+}
+
+function resetProjectSection() {
+    document.getElementById("proj-title").innerText = "";
+    document.getElementById("proj-link").href = "";
+    document.getElementById("proj-link").innerText = "";
+    document.getElementById("proj-tech").innerHTML = "";
+    document.getElementById("proj-desc").innerText = "";
+    document.getElementById("proj-contributors").innerHTML = "";
+}
+
+function getOffset(el) {
+    const rect = el.getBoundingClientRect();
+    return {
+        left: rect.left + window.scrollX,
+        top: rect.top + window.scrollY
+    };
+}
+
+
+
+let current_clicked;
+let current_page;
+
+function buttonSelected(element) {
+
+    if (current_clicked != null) {
+        let ret = element.id == current_clicked.id;
+        current_page.style.display = "none";;
+        current_page = null;
+        current_clicked = null;
+        if (ret)
+            return;
+    }
+
+    current_clicked = element;
+
+    switch (current_clicked.id) {
+        case "projects-Button":
+            current_page = document.getElementById("project-page");
+            break;
+        case "career-Button":
+            current_page = document.getElementById("career-page");
+            let cont = document.getElementById("careers-container");
+            careers.forEach(crr => {
+                cont.innerHTML = careerHTML1 + crr.company + careerHTML2 + crr.location + careerHTML3 + crr.position + careerHTML4 + crr.duration + careerHTML5;
+            });
+            break;
+        case "skills-Button":
+            current_page = document.getElementById("skills-page");
+            break;
+        case "research-Button":
+            current_page = document.getElementById("research-page");
+            break;
+    }
+
+    current_page.style.display = "flex";
+
+}

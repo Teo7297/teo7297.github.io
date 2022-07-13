@@ -24,10 +24,13 @@
         </div>
 
         <div id="social-links">
-            <a class="social" href="mailto:matteo.cavagnino.mc@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+            <a class="social" href="mailto:matteo.cavagnino.mc@gmail.com" target="_blank"><i
+                    class="fa fa-envelope fa-2x"></i></a>
             <a class="social" href="https://github.com/Teo7297" target="_blank"><i class="fa fa-github fa-2x"></i></a>
-            <a class="social" href="https://www.linkedin.com/in/matteo-cavagnino-25a677185/" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a>
-            <a class="social" href="/files/CavagninoMatteoCV.pdf" download target="_blank"><i class="fa fa-solid fa-file-arrow-down fa-2x"></i></a>
+            <a class="social" href="https://www.linkedin.com/in/matteo-cavagnino-25a677185/" target="_blank"><i
+                    class="fa fa-linkedin fa-2x"></i></a>
+            <a class="social" href="/files/CavagninoMatteoCV.pdf" download target="_blank"><i
+                    class="fa fa-solid fa-file-arrow-down fa-2x"></i></a>
 
         </div>
 
@@ -55,25 +58,54 @@
             </div>
         </section>
 
-        <section id="current-page">
-            <h2 id="section-title">Personal Projects</h2>
+        <section id="project-page">
+            <h2 class="section-title">Personal Projects</h2>
             <div id="projects-container">
-                <button onclick="" id="angelwrath" class="proj-btn" style="background-image: url('img/IRA_thumb.png');"></button>
-                <button onclick="" id="RPG" class="proj-btn" style="background-image: url('img/RPG_thumb.png');"></button>
-                <button onclick="" id="skala" class="proj-btn" style="background-image: url('img/SKALA_thumb.png');"></button>
-                <button onclick="" id="openGL" class="proj-btn">OpenGL</button>
-                <button onclick="" id="PHero" class="proj-btn" style="background-image: url('img/PHero_thumb.png');"></button>
-                <button onclick="" id="Movie-store" class="proj-btn" style="background-image: url('img/MStore_thumb.png');"></button>
-                <button onclick="" id="LiraRecognizer" class="proj-btn" style="background-image: url('img/Lira_thumb.png');"></button>
+                <button onclick="showProject(this)" id="angelwrath" class="proj-btn"
+                    style="background-image: url('img/IRA_thumb.png');"></button>
+                <button onclick="showProject(this)" id="RPG" class="proj-btn"
+                    style="background-image: url('img/RPG_thumb.png');"></button>
+                <button onclick="showProject(this)" id="skala" class="proj-btn"
+                    style="background-image: url('img/SKALA_thumb.png');"></button>
+                <button onclick="showProject(this)" id="openGL" class="proj-btn">OpenGL</button>
+                <button onclick="showProject(this)" id="PHero" class="proj-btn"
+                    style="background-image: url('img/PHero_thumb.png');"></button>
+                <button onclick="showProject(this)" id="Movie-store" class="proj-btn"
+                    style="background-image: url('img/MStore_thumb.png');"></button>
+                <button onclick="showProject(this)" id="LiraRecognizer" class="proj-btn"
+                    style="background-image: url('img/Lira_thumb.png');"></button>
             </div>
+
+            <div id="project"></div>
+
+            <section id="current-project">
+                <h2 id="proj-title"></h2>
+                <br><br><br>
+                <h3>Github link</h3>
+                <a id="proj-link"></a>
+                <br><br>
+                <h3>Tech stack</h3>
+                <div id="proj-tech"></div>
+                <br><br>
+                <h3>Description</h3>
+                <div id="proj-desc"></div>
+                <br><br>
+                <div id="proj-media"></div>
+                <br><br>
+                <h3>Project contributors</h3>
+                <div id="proj-contributors"></div>
+            </section>
         </section>
 
-        <section id="current-project">
-            <div id="proj-title"></div>
-            <div id="proj-desc"></div>
-            <div id="proj-media"></div>
-            <div id="proj-contributors"></div>
+        <section id="career-page">
+            <h2 class="section-title">My career</h2>
+            <div id="careers-container">
+                
+            </div>
+
         </section>
+        <section id="skills-page"></section>
+        <section id="research-page"></section>
 
 
     </div>
