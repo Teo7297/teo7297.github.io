@@ -21,7 +21,8 @@
 body {
     background-image: radial-gradient(ellipse at center, #326F91 0%, rgb(0, 17, 20) 100%);
     background-repeat: no-repeat;
-    background-size: 100vw 300vh;
+    background-size: 100vw 101vh;
+    background-attachment: fixed;
 }
 
 #container {
@@ -127,7 +128,7 @@ hr.thin {
     margin: 20px;
     background: none;
     border-radius: 25px;
-    border: 2px solid #ffffff;
+    border: 2px solid white;
     width: 150px;
     height: 50px;
     text-align: center;
@@ -171,7 +172,7 @@ hr.thin {
     margin: 20px;
     background: none;
     border-radius: 50px;
-    border: 2px solid #ffffff;
+    border: 2px solid white;
     width: 100px;
     height: 100px;
     color: white;
@@ -232,10 +233,93 @@ hr.thin {
     font-family: finlandica;
 }
 
-#skills-page {
-    display: flex;
+#skillspage {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#research-page {
+#skillscontainer {
     display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+    color: white;
+    font-family: finlandica;
+}
+
+.skillbox {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vh;
+    align-items: center;
+    justify-content: left;
+}
+
+.progress.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: left;
+    background-color: #124f54;
+    width: 60%;
+    height: 2vh;
+}
+
+.filling{
+    border-radius: inherit;
+    background-image: linear-gradient(to right,#3D7EAA, #FFE47A);
+    width: 0;
+    height: 100%;
+}
+
+
+#researchpage {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#researchcontainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+    color: white;
+    font-family: finlandica;
+}
+
+#studypage {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#studycontainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0vh;
+    margin-bottom: 20vh;
+    color: white;
+    font-family: finlandica;
+}
+
+.studybox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }

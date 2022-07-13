@@ -52,6 +52,7 @@
         <section class="show-buttons">
             <div class="button_container">
                 <button onclick="buttonSelected(this)" id="projects-Button" class="show-btn">Projects</button>
+                <button onclick="buttonSelected(this)" id="studies-Button" class="show-btn">Studies</button>
                 <button onclick="buttonSelected(this)" id="career-Button" class="show-btn">Career</button>
                 <button onclick="buttonSelected(this)" id="skills-Button" class="show-btn">Skills</button>
                 <button onclick="buttonSelected(this)" id="research-Button" class="show-btn">Research</button>
@@ -60,6 +61,7 @@
 
         <section id="project-page">
             <h2 class="section-title">Personal Projects</h2>
+            <div><hr class="thin"></div>
             <div id="projects-container">
                 <button onclick="showProject(this)" id="angelwrath" class="proj-btn"
                     style="background-image: url('img/IRA_thumb.png');"></button>
@@ -99,13 +101,31 @@
 
         <section id="career-page">
             <h2 class="section-title">My career</h2>
+            <div><hr class="thin"></div>
             <div id="careers-container">
                 
             </div>
-
         </section>
-        <section id="skills-page"></section>
-        <section id="research-page"></section>
+
+
+        <section id="skillspage">
+            <h2 class="section-title">My skills self-evaluation</h2>
+            <div><hr class="thin"></div> 
+            <div id="skillscontainer"></div>
+        </section>
+
+
+        <section id="researchpage">
+            <h2 class="section-title">My research contribution</h2>
+            <div><hr class="thin"></div> 
+            <div id="researchcontainer"></div>
+        </section>
+
+        <section id="studypage">
+            <h2 class="section-title">My studies</h2>
+            <div><hr class="thin"></div> 
+            <div id="studycontainer"></div>
+        </section>
 
 
     </div>

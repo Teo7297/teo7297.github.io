@@ -205,7 +205,7 @@ let career = {
     "duration": ""
 };
 
-let careerHTML1 = '<div><hr class="thin"></div><h2>Company</h2><div>';
+let careerHTML1 = '</div><h2>Company</h2><div>';
 let careerHTML2 = "</div><br><br><h3>Location</h3><div>";
 let careerHTML3 = "</div><br><br><h3>Job position</h3><div>";
 let careerHTML4 = "</div><br><br><h3>Duration</h3><div>";
@@ -228,6 +228,11 @@ let skill = {
     "name": "",
     "level": 0
 };
+
+let skillHTML1 = "<div class='skillbox'><h4 style='width: 15%;'>";
+let skillHTML2 = "</h4><div class='progress'><span class='filling' progress='";
+let skillHTML3 = "'></span></div><div style='margin-left: 5vw'>";
+let skillHTML4 = "%</div></div>";
 
 let java = Object.assign({}, skill);
 java.name = "Java";
@@ -262,29 +267,31 @@ opengl.level = 40;
 let cmake = Object.assign({}, skill);
 cmake.name = "CMake";
 cmake.level = 60;
-let vscode = Object.assign({}, skill);
-vscode.name = "VSCode";
-vscode.level = 90;
-let vs = Object.assign({}, skill);
-vs.name = "Visual Studio";
-vs.level = 70;
-let english = Object.assign({}, skill);
-english.name = "English";
-english.level = 85;
-let italian = Object.assign({}, skill);
-italian.name = "Italian";
-italian.level = 96;
+// let vscode = Object.assign({}, skill);
+// vscode.name = "VSCode";
+// vscode.level = 90;
+// let vs = Object.assign({}, skill);
+// vs.name = "Visual Studio";
+// vs.level = 70;
+// let english = Object.assign({}, skill);
+// english.name = "English";
+// english.level = 85;
+// let italian = Object.assign({}, skill);
+// italian.name = "Italian";
+// italian.level = 96;
 let plsql = Object.assign({}, skill);
 plsql.name = "PL/SQL";
-plsql.level = "65";
+plsql.level = 65;
 let mongoDB = Object.assign({}, skill);
 mongoDB.name = "MongoDB";
-mongoDB.level = "60";
+mongoDB.level = 60;
 let git = Object.assign({}, skill);
 git.name = "GIT";
-git.level = "70";
+git.level = 70;
 
-let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, vscode, vs, english, italian, plsql, mongoDB, git];
+let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, plsql, mongoDB, git];
+
+skills.sort((a, b) => b.level - a.level); // reverse order sorting
 
 
 ////////////////////////////////////////////////////////////////////////
@@ -298,11 +305,43 @@ let research = {
 };
 
 let notyet = Object.assign({}, research);
-notyet.title = "Research thesis under current development";
+notyet.title = "-- Research thesis under current development --";
 
 
 let researches = [notyet,];
 ////////////////////////////////////////////////////////////////////////
+
+//studies
+
+let study = {
+    "University": "",
+    "Faculty": "",
+    "Years": "",
+    "Concluded": ""
+};
+
+let triennale = Object.assign({}, study);
+triennale.University = "Universita' degli studi dell'Insubria di Varese";
+triennale.Years = "3 Years";
+triennale.Concluded = "December 2019";
+triennale.Faculty = "Computer Science (Informatica)";
+
+let magistrale = Object.assign({}, study);
+magistrale.University = "Universita' degli studi di Milano";
+magistrale.Years = "2 Years";
+magistrale.Concluded = "Expected October 2022";
+magistrale.Faculty = "Master Computer Science (Informatica Magistrale)";
+
+let studies = [triennale, magistrale];
+
+let studyHTML1 = '</div><h2>University</h2><div>';
+let studyHTML2 = "</div><br><br><h3>Faculty</h3><div>";
+let studyHTML3 = "</div><br><br><h3>Length</h3><div>";
+let studyHTML4 = "</div><br><br><h3>Concluded</h3><div>";
+let studyHTML5 = '</div><div><hr class="thin"></div>';
+
+
+
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -376,7 +415,7 @@ function buttonSelected(element) {
 
     if (current_clicked != null) {
         let ret = element.id == current_clicked.id;
-        current_page.style.display = "none";;
+        current_page.style.display = "none";
         current_page = null;
         current_clicked = null;
         if (ret)
@@ -385,23 +424,51 @@ function buttonSelected(element) {
 
     current_clicked = element;
 
+    let cont;
+
     switch (current_clicked.id) {
         case "projects-Button":
             current_page = document.getElementById("project-page");
             break;
         case "career-Button":
             current_page = document.getElementById("career-page");
-            let cont = document.getElementById("careers-container");
+            cont = document.getElementById("careers-container");
+            cont.innerHTML = "";
             careers.forEach(crr => {
-                cont.innerHTML = careerHTML1 + crr.company + careerHTML2 + crr.location + careerHTML3 + crr.position + careerHTML4 + crr.duration + careerHTML5;
+                cont.innerHTML += careerHTML1 + crr.company + careerHTML2 + crr.location + careerHTML3 + crr.position + careerHTML4 + crr.duration + careerHTML5;
             });
             break;
         case "skills-Button":
-            current_page = document.getElementById("skills-page");
+            cont = document.getElementById("skillscontainer");
+            cont.innerHTML = "";
+            current_page = document.getElementById("skillspage");
+            skills.forEach(sk => {
+                cont.innerHTML += skillHTML1 + sk.name + skillHTML2 + sk.level + skillHTML3 + sk.level + skillHTML4;
+            });
+            let fills = document.getElementsByClassName("filling");
+            for (let fill of fills) {
+                let attr = fill.getAttribute("progress");
+                fill.style.width = attr + "%";
+            }
             break;
         case "research-Button":
-            current_page = document.getElementById("research-page");
+            current_page = document.getElementById("researchpage");
+            cont = document.getElementById("researchcontainer");
+            cont.innerHTML = "";
+            researches.forEach(rsc => {
+                cont.innerHTML = "<h4>" + rsc.title + "</h4>";
+            });
             break;
+        case "studies-Button":
+            current_page = document.getElementById("studypage");
+            cont = document.getElementById("studycontainer");
+            cont.innerHTML = "";
+            studies.forEach(std => {
+                cont.innerHTML += studyHTML1 + std.University + studyHTML2 + std.Faculty + studyHTML3 + std.Years + studyHTML4 + std.Concluded + studyHTML5;
+            });
+            break;
+
+
     }
 
     current_page.style.display = "flex";
