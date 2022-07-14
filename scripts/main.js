@@ -32,7 +32,7 @@ angelwrath.tech_stack = [
     "Communication channels: Discord/Telegram"
 ];
 
-angelwrath.video = "video/IRA_clip.mp4";
+angelwrath.video = "https://youtube.com/embed/yaxInOyVBpY";
 
 angelwrath.images = ["img/IRA_arena.png",];
 
@@ -58,7 +58,7 @@ RPG.descriprion = "This is a simple RPG project I made while learning many of th
 
 RPG.link = "https://github.com/Teo7297/3D_RPG";
 
-RPG.video = "video/3D_RPG_clip.mp4";
+RPG.video = "https://youtube.com/embed/ypLnMQzCsgM";
 
 RPG.tech_stack = [
     "Unity V2021 LTS",
@@ -92,7 +92,7 @@ skala.tech_stack = [
     "Google Suite (Docs, Jamboard)"
 ];
 
-skala.video = "video/skalatrailer.mp4";
+skala.video = "https://youtube.com/embed/B7V9Hubs_AE";
 
 skala.contributors = [
     "Buganza Nicolo' - Game Design, Programming, Team Lead",
@@ -123,7 +123,7 @@ openGL.tech_stack = [
     "Dear ImGui framework - Debug UI"
 ];
 
-openGL.video = "video/opengl_clip.mp4";
+openGL.video = "https://youtube.com/embed/kYR3sBq-Vyk";
 
 openGL.contributors = [
     "Cavagnino Matteo",
@@ -146,7 +146,7 @@ piano_hero.tech_stack = [
     "GIT"
 ];
 
-piano_hero.video = "video/PHero_clip.mp4";
+piano_hero.video = "https://youtube.com/embed/Nz3FOKnwXrE";
 
 piano_hero.contributors = [
     "Cavagnino Matteo",
@@ -162,7 +162,7 @@ movie_store.link = "https://github.com/Teo7297/movie_store";
 
 movie_store.descriprion = "Movie Store is a browser application that resembles how an online movie store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
 
-movie_store.video = "video/movie_store_clip.mp4";
+movie_store.video = "https://youtube.com/embed/r1UkrpU2yrE";
 
 
 
@@ -398,7 +398,7 @@ function showProject(btn) {
 
     document.getElementById("proj-link").innerText = p.link;
     if (p.video != "")
-        document.getElementById("proj-video").innerHTML = '<video width="1280" height="960"controls><source src="' + p.video + '" type="video/mp4"></video>';
+        document.getElementById("proj-video").innerHTML = '<iframe width="1280" height="960" src="' + p.video + '"</iframe>';
     if (p.images != [])
         document.getElementById("proj-img").innerHTML = '<img src="' + p.images[0] + '" alt="">';
     p.tech_stack.forEach(element => {
