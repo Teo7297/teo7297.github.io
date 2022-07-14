@@ -5,7 +5,8 @@ let project = {
     "link": "",
     "descriprion": "",
     "tech_stack": [],
-    "media": [],
+    "video": "",
+    "images": [],
     "contributors": []
 }
 
@@ -15,12 +16,14 @@ angelwrath.title = "I.R.A. Project";
 
 angelwrath.thumbnail = "";
 
-angelwrath.descriprion = "I.R.A. is my first big project, especially working with others, and it is currently under active development. Our team aims to produce a gameplay-focused, fast-paced action first-person shooter set in hell-inspired environments that will present many gameplay elements from classic games like Quake and Doom. Moreover, the game will offer Roguelite mechanics. The project's main focus goes into the \"Gameplay moment\" design that our players look for during their sessions.";
+angelwrath.descriprion = "I.R.A. is my first big project, especially working with others, and it is currently under active development. Our team aims to produce a gameplay-focused, fast-paced action first-person shooter set in hell-inspired environments that will present many gameplay elements from classic games like Quake and Doom. Moreover, the game will offer Roguelite mechanics. The project's main focus goes into the \"Gameplay moment\" design that our players look for during their sessions. The project is in early development stages and this page will be updated frequently.";
 
-angelwrath.link = "";
+angelwrath.link = "Private Project";
 
 angelwrath.tech_stack = [
     "Unity V2021 LTS",
+    "C#",
+    "Python",
     "VSCode/Visual Studio",
     "GIT",
     "Blender",
@@ -29,9 +32,9 @@ angelwrath.tech_stack = [
     "Communication channels: Discord/Telegram"
 ];
 
-angelwrath.media = [
+angelwrath.video = "video/IRA_clip.mp4";
 
-];
+angelwrath.images = ["img/IRA_arena.png",];
 
 angelwrath.contributors = [
     "Selva Stefano - Project Lead",
@@ -53,12 +56,13 @@ RPG.title = "3D Learning RPG";
 
 RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks. Most of the project was conducted following lessons from the courses provided on www.gamedev.tv website.";
 
-RPG.link = "";
+RPG.link = "https://github.com/Teo7297/3D_RPG";
 
-RPG.media = [];
+RPG.video = "video/3D_RPG_clip.mp4";
 
 RPG.tech_stack = [
     "Unity V2021 LTS",
+    "C#",
     "VSCode",
     "GIT",
     "Google suite (Docs, Sheets)"
@@ -80,12 +84,15 @@ skala.link = "https://github.com/itsNikk/OGD2021_SKALA";
 
 skala.tech_stack = [
     "Unity V2019 LTS",
+    "C#",
     "Mirror - Networking",
     "Amazon Web Services - Online server",
     "Jetbrains Rider / Visual Studio",
     "GIT",
     "Google Suite (Docs, Jamboard)"
 ];
+
+skala.video = "video/skalatrailer.mp4";
 
 skala.contributors = [
     "Buganza Nicolo' - Game Design, Programming, Team Lead",
@@ -116,6 +123,8 @@ openGL.tech_stack = [
     "Dear ImGui framework - Debug UI"
 ];
 
+openGL.video = "video/opengl_clip.mp4";
+
 openGL.contributors = [
     "Cavagnino Matteo",
 ];
@@ -137,6 +146,8 @@ piano_hero.tech_stack = [
     "GIT"
 ];
 
+piano_hero.video = "video/PHero_clip.mp4";
+
 piano_hero.contributors = [
     "Cavagnino Matteo",
 ];
@@ -147,9 +158,13 @@ let movie_store = Object.assign({}, project);
 
 movie_store.title = "Movie Store";
 
-movie_store.link = "";
+movie_store.link = "https://github.com/Teo7297/movie_store";
 
 movie_store.descriprion = "Movie Store is a browser application that resembles how an online movie store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
+
+movie_store.video = "video/movie_store_clip.mp4";
+
+
 
 movie_store.tech_stack = [
     "VSCode",
@@ -374,9 +389,18 @@ function showProject(btn) {
 
 
     document.getElementById("proj-title").innerText = p.title;
-    document.getElementById("proj-link").href = p.link;
-    document.getElementById("proj-link").innerText = p.link;
+    if (p.link == "Private Project") {
+        document.getElementById("proj-link").innerText = p.link;
+        document.getElementById("proj-link").removeAttribute("href");
+    }
 
+    else { document.getElementById("proj-link").href = p.link; }
+
+    document.getElementById("proj-link").innerText = p.link;
+    if (p.video != "")
+        document.getElementById("proj-video").innerHTML = '<video width="1280" height="960"controls><source src="' + p.video + '" type="video/mp4"></video>';
+    if (p.images != [])
+        document.getElementById("proj-img").innerHTML = '<img src="' + p.images[0] + '" alt="">';
     p.tech_stack.forEach(element => {
         document.getElementById("proj-tech").innerHTML += '<div>' + element + '</div>';
     });
@@ -395,6 +419,8 @@ function resetProjectSection() {
     document.getElementById("proj-link").innerText = "";
     document.getElementById("proj-tech").innerHTML = "";
     document.getElementById("proj-desc").innerText = "";
+    document.getElementById("proj-video").innerHTML = "";
+    document.getElementById("proj-img").innerHTML = "";
     document.getElementById("proj-contributors").innerHTML = "";
 }
 
