@@ -347,7 +347,7 @@ magistrale.Years = "2 Years";
 magistrale.Concluded = "Expected October 2022";
 magistrale.Faculty = "Master Computer Science (Informatica Magistrale)";
 
-let studies = [triennale, magistrale];
+let studies = [magistrale, triennale];
 
 let studyHTML1 = '</div><h2>University</h2><div>';
 let studyHTML2 = "</div><br><br><h3>Faculty</h3><div>";
