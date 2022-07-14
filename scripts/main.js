@@ -442,6 +442,7 @@ function buttonSelected(element) {
     if (current_clicked != null) {
         let ret = element.id == current_clicked.id;
         current_page.style.display = "none";
+        current_clicked.style.backgroundColor = "";
         current_page = null;
         current_clicked = null;
         if (ret)
@@ -449,6 +450,7 @@ function buttonSelected(element) {
     }
 
     current_clicked = element;
+    current_clicked.style.backgroundColor = "#58a9b0";
 
     let cont;
 
