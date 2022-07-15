@@ -34,7 +34,7 @@ angelwrath.tech_stack = [
 
 angelwrath.video = "https://youtube.com/embed/yaxInOyVBpY";
 
-angelwrath.images = ["img/IRA_arena.png",];
+angelwrath.images = ["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
 
 angelwrath.contributors = [
     "Selva Stefano - Project Lead",
@@ -400,7 +400,9 @@ function showProject(btn) {
     if (p.video != "")
         document.getElementById("proj-video").innerHTML = '<iframe width="1280" height="960" src="' + p.video + '"</iframe>';
     if (p.images != [])
-        document.getElementById("proj-img").innerHTML = '<img src="' + p.images[0] + '" alt="">';
+        p.images.forEach(img => {
+            document.getElementById("proj-img").innerHTML += '<img src="' + img + '" alt="">';
+        });
     p.tech_stack.forEach(element => {
         document.getElementById("proj-tech").innerHTML += '<div>' + element + '</div>';
     });

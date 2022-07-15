@@ -53,10 +53,17 @@ body {
     height: 25vh;
 }
 
-img {
+#proj-img > img {
+    height: 100%;
+    width: auto;
+    max-width: 80%;
+}
+
+#portrait > img {
     height: 100%;
     width: auto;
 }
+
 
 #social-links {
     width: 100%;
