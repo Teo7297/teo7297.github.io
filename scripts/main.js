@@ -398,7 +398,7 @@ function showProject(btn) {
 
     document.getElementById("proj-link").innerText = p.link;
     if (p.video != "")
-        document.getElementById("proj-video").innerHTML = '<iframe width="1280" height="960" src="' + p.video + '"</iframe>';
+        document.getElementById("proj-video").innerHTML = '<iframe class="responsiveiframe" src="' + p.video + '"</iframe>';
     if (p.images != [])
         p.images.forEach(img => {
             document.getElementById("proj-img").innerHTML += '<img src="' + img + '" alt="">';
