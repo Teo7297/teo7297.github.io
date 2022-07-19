@@ -303,8 +303,11 @@ mongoDB.level = 60;
 let git = Object.assign({}, skill);
 git.name = "GIT";
 git.level = 70;
+let linux = Object.assign({}, skill);
+linux.name = "LINUX";
+linux.level = 67;
 
-let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, plsql, mongoDB, git];
+let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, plsql, mongoDB, git, linux];
 
 skills.sort((a, b) => b.level - a.level); // reverse order sorting
 
