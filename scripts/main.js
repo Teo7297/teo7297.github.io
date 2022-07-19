@@ -397,8 +397,13 @@ function showProject(btn) {
     else { document.getElementById("proj-link").href = p.link; }
 
     document.getElementById("proj-link").innerText = p.link;
-    if (p.video != "")
+    if (p.video != ""){
+        document.getElementById("proj-video").style.paddingTop = "56.25%";
         document.getElementById("proj-video").innerHTML = '<iframe class="responsiveiframe" src="' + p.video + '"</iframe>';
+    }
+    else{
+        document.getElementById("proj-video").style.paddingTop = "0%";
+    }
     if (p.images != [])
         p.images.forEach(img => {
             document.getElementById("proj-img").innerHTML += '<img src="' + img + '" alt="">';
