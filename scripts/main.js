@@ -401,11 +401,13 @@ function showProject(btn) {
 
     document.getElementById("proj-link").innerText = p.link;
     if (p.video != ""){
-        document.getElementById("proj-video").style.paddingTop = "56.25%";
+        // document.getElementById("proj-video").style.paddingTop = "56.25%";
+        document.getElementById("proj-video").style.height = "45vw";
         document.getElementById("proj-video").innerHTML = '<iframe class="responsiveiframe" allowfullscreen="allowfullscreen" src="' + p.video + '"</iframe>';
     }
     else{
-        document.getElementById("proj-video").style.paddingTop = "0%";
+        // document.getElementById("proj-video").style.paddingTop = "0%";
+        document.getElementById("proj-video").style.height = "0vw";
     }
     if (p.images != [])
         p.images.forEach(img => {
