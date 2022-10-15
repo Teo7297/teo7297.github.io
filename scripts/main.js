@@ -272,10 +272,10 @@ unity.name = "Unity";
 unity.level = 75;
 let c = Object.assign({}, skill);
 c.name = "C";
-c.level = 30;
+c.level = 50;
 let cpp = Object.assign({}, skill);
 cpp.name = "C++";
-cpp.level = 50;
+cpp.level = 69;
 let opengl = Object.assign({}, skill);
 opengl.name = "OpenGL";
 opengl.level = 40;
@@ -322,11 +322,13 @@ let research = {
     "link": ""
 };
 
-let notyet = Object.assign({}, research);
-notyet.title = "-- Research thesis under current development --";
+let thesis = Object.assign({}, research);
+thesis.title = "Design and Development of an Assurance Methodology for Security Certifications in Highly Dynamic Architectures";
+thesis.descriprion = "This is my research and development bachelor's degree thesis developed at Universita' degli Studi di Milano. The thesis work is about security certifications in highly dynamic architectures such as Cloud and IoT systems. The work is written in English and compiled with LaTeX."
+thesis.link = "https://github.com/Teo7297/Bachelor-Degree-Thesis/blob/main/THESIS.pdf"
 
 
-let researches = [notyet,];
+let researches = [thesis,];
 ////////////////////////////////////////////////////////////////////////
 
 //studies
@@ -347,7 +349,7 @@ triennale.Faculty = "Computer Science (Informatica)";
 let magistrale = Object.assign({}, study);
 magistrale.University = "Universita' degli studi di Milano";
 magistrale.Years = "2 Years";
-magistrale.Concluded = "Expected October 2022";
+magistrale.Concluded = "October 2022";
 magistrale.Faculty = "Master Computer Science (Informatica Magistrale)";
 
 let studies = [magistrale, triennale];
@@ -496,7 +498,9 @@ function buttonSelected(element) {
             cont = document.getElementById("researchcontainer");
             cont.innerHTML = "";
             researches.forEach(rsc => {
-                cont.innerHTML = "<h4>" + rsc.title + "</h4>";
+                cont.innerHTML = "<h2 style='text-align: center; max-width: 70vw''>" + rsc.title + "</h2>";
+                cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.descriprion + "</h4>";
+                cont.innerHTML += "</br></br><h2>Github link</h2><a id='proj-link' href='" + rsc.link +  "' style='text-align: center;'>" + rsc.link + "</a>";
             });
             break;
         case "studies-Button":
