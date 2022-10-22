@@ -12,7 +12,7 @@ let project = {
 
 let angelwrath = Object.assign({}, project);
 
-angelwrath.title = "I.R.A. Project";
+angelwrath.title = "I.R.A. Project (Active Development)";
 
 angelwrath.thumbnail = "";
 
