@@ -32,18 +32,17 @@ angelwrath.tech_stack = [
     "Communication channels: Discord/Telegram"
 ];
 
-angelwrath.video = "https://youtube.com/embed/yaxInOyVBpY";
+angelwrath.video = ""//"https://youtube.com/embed/yaxInOyVBpY";
 
-angelwrath.images = ["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
+angelwrath.images = ["img/IRA_character.png",]//["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
 
 angelwrath.contributors = [
-    "Selva Stefano - Project Lead",
-    "Cavagnino Matteo - Programming",
+    "Selva Stefano - Project Lead, VFX, Game designer",
+    "Cavagnino Matteo - Programming, Game designer",
     "Lamperti Ivan - Programming",
     "Bodini Andrea - Programming",
-    "Natalia - Concept artist",
+    "Natalia - Concept artist, textures and UI designer",
     "Marco - 3D Model Artist, Rigging",
-    "Frassinelli Matteo - 3D Model Artist, Rigging"
 ];
 
 
@@ -402,12 +401,12 @@ function showProject(btn) {
     else { document.getElementById("proj-link").href = p.link; }
 
     document.getElementById("proj-link").innerText = p.link;
-    if (p.video != ""){
+    if (p.video != "") {
         // document.getElementById("proj-video").style.paddingTop = "56.25%";
         document.getElementById("proj-video").style.height = "45vw";
         document.getElementById("proj-video").innerHTML = '<iframe class="responsiveiframe" allowfullscreen="allowfullscreen" src="' + p.video + '"</iframe>';
     }
-    else{
+    else {
         // document.getElementById("proj-video").style.paddingTop = "0%";
         document.getElementById("proj-video").style.height = "0vw";
     }
@@ -500,7 +499,7 @@ function buttonSelected(element) {
             researches.forEach(rsc => {
                 cont.innerHTML = "<h2 style='text-align: center; max-width: 70vw''>" + rsc.title + "</h2>";
                 cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.descriprion + "</h4>";
-                cont.innerHTML += "</br></br><h2>Github link</h2><a id='proj-link' href='" + rsc.link +  "' style='text-align: center;'>" + rsc.link + "</a>";
+                cont.innerHTML += "</br></br><h2>Github link</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
             });
             break;
         case "studies-Button":
