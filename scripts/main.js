@@ -229,11 +229,18 @@ let careerHTML5 = '</div><div><hr class="thin"></div>';
 let alterna = Object.assign({}, career);
 alterna.company = "Altea Federation - Alterna";
 alterna.location = "Italy, Lainate(MI)";
-alterna.position = "Software developer - internship";
+alterna.position = "Software developer - Internship";
 alterna.duration = "4 months (May 2021 - September 2021)";
 
+let CAE_italy = Object.assign({}, career);
+CAE_italy.company = "CAE Services Italia - Rotorsim";
+CAE_italy.location = "Italy, Sesto Calende(VA)";
+CAE_italy.position = "Flight Simulators Software Engineer - Full Time";
+CAE_italy.duration = "December 2022 - Actual Occupation";
 
-let careers = [alterna,];
+
+
+let careers = [CAE_italy, alterna,];
 
 ////////////////////////////////////////////////////////////////////////
 
