@@ -24,6 +24,7 @@ html {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    overscroll-behavior-y: none;
 }
 
 body {
@@ -294,6 +295,22 @@ hr.thin {
     margin-bottom: 2vh;
     align-items: center;
     justify-content: left;
+    min-width: 100%;
+    
+}
+
+.skill-name
+{
+    min-width: 20vw;
+    max-width: 20vw;
+}
+
+.progress-container
+{
+    width: 100%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
 }
 
 .progress.progress{
@@ -302,8 +319,10 @@ hr.thin {
     justify-content: left;
     align-items: left;
     background-color: #124f54;
-    width: 60%;
+    width: 50vw;
     height: 2vh;
+    margin-left: 20px;
+    margin-right: 10vw;
 }
 
 .filling{
@@ -312,6 +331,7 @@ hr.thin {
     width: 0;
     height: 100%;
 }
+
 
 
 #researchpage {

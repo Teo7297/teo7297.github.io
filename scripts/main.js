@@ -53,7 +53,7 @@ let RPG = Object.assign({}, project);
 
 RPG.title = "3D Learning RPG";
 
-RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks. Most of the project was conducted following lessons from the courses provided on www.gamedev.tv website.";
+RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks.";
 
 RPG.link = "https://github.com/Teo7297/3D_RPG";
 
@@ -232,15 +232,15 @@ alterna.location = "Italy, Lainate(MI)";
 alterna.position = "Software developer - Internship";
 alterna.duration = "4 months (May 2021 - September 2021)";
 
-let CAE_italy = Object.assign({}, career);
-CAE_italy.company = "CAE Services Italia - Rotorsim";
-CAE_italy.location = "Italy, Sesto Calende(VA)";
-CAE_italy.position = "Flight Simulators Software Engineer - Full Time";
-CAE_italy.duration = "December 2022 - Actual Occupation";
+let CAE = Object.assign({}, career);
+CAE.company = "CAE";
+CAE.location = "Italy, Sesto Calende(VA)";
+CAE.position = "Flight Simulators Software Engineer - Full Time";
+CAE.duration = "December 2022 - Actual Occupation";
 
 
 
-let careers = [CAE_italy, alterna,];
+let careers = [CAE, alterna,];
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -250,9 +250,9 @@ let skill = {
     "level": 0
 };
 
-let skillHTML1 = "<div class='skillbox'><h4 style='width: 15%;'>";
-let skillHTML2 = "</h4><div class='progress'><span class='filling' progress='";
-let skillHTML3 = "'></span></div><div style='margin-left: 5vw'>";
+let skillHTML1 = "<div class='skillbox'><h4 class='skill-name' style='width: 15%;'>";
+let skillHTML2 = "</h4><div class='progress-container'><div class='progress'><span class='filling' progress='";
+let skillHTML3 = "'></span></div></div><div style='margin-left: 5vw; max-width=10vw; min-width=10vw'>";
 let skillHTML4 = "%</div></div>";
 
 let java = Object.assign({}, skill);
