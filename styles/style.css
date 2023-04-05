@@ -23,15 +23,15 @@ html {
     height: 100dvh;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
+    overflow: hidden;
     overscroll-behavior-y: none;
 }
 
 body {
+    overflow: auto;
     background-image: radial-gradient(ellipse at center, #326F91 0%, rgb(0, 17, 20) 100%);
-    background-color: #124f54;
+    background-color: #124e5400;
     background-repeat: repeat;
-    background-size: 100vw 100dvh;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
