@@ -20,7 +20,7 @@
 
 html {
     width: 100vw;
-    height: 100vh;
+    height: 100dvh;
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
@@ -30,7 +30,7 @@ html {
 body {
     background-image: radial-gradient(ellipse at center, #326F91 0%, rgb(0, 17, 20) 100%);
     background-repeat: no-repeat;
-    background-size: 100vw 101vh;
+    background-size: 100vw 100dvh;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
