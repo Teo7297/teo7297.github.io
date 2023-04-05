@@ -433,8 +433,6 @@ function showProject(btn) {
     p.contributors.forEach(element => {
         document.getElementById("proj-contributors").innerHTML += '<div>' + element + '</div>';
     });
-
-    window.scroll(0, getOffset(document.getElementById("project")).top);
 }
 
 function resetProjectSection() {

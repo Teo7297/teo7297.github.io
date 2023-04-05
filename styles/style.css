@@ -28,7 +28,9 @@ html {
 }
 
 body {
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
     background-image: radial-gradient(ellipse at center, #326F91 0%, rgb(0, 17, 20) 100%);
     background-color: #124e5400;
     background-repeat: repeat;
