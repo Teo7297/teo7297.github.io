@@ -32,6 +32,10 @@ body {
     background-repeat: no-repeat;
     background-size: 100vw 101vh;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #container {
@@ -62,13 +66,13 @@ body {
     height: 30vh;
 }
 
-#proj-img > img {
+#proj-img>img {
     height: 100%;
     width: auto;
     max-width: 80%;
 }
 
-#portrait > img {
+#portrait>img {
     height: 100%;
     width: auto;
 }
@@ -174,20 +178,16 @@ hr.thin {
     position: relative;
     overflow: hidden;
     width: 80vw;
-    height: 45vw;
+    min-height: 45vw;
     /*padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  }
-  
-  /* Then style the iframe to fit in the container div with full height and width */
-  .responsiveiframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsiveiframe {
+    min-height: 45vw;
     width: 100%;
     height: 100%;
-  }
+}
 
 
 .section-title {
@@ -296,24 +296,22 @@ hr.thin {
     align-items: center;
     justify-content: left;
     min-width: 100%;
-    
+
 }
 
-.skill-name
-{
+.skill-name {
     min-width: 20vw;
     max-width: 20vw;
 }
 
-.progress-container
-{
+.progress-container {
     width: 100%;
     display: flex;
     align-items: right;
     justify-content: right;
 }
 
-.progress.progress{
+.progress.progress {
     display: flex;
     flex-direction: row;
     justify-content: left;
@@ -325,9 +323,9 @@ hr.thin {
     margin-right: 10vw;
 }
 
-.filling{
+.filling {
     border-radius: inherit;
-    background-image: linear-gradient(to right,#3D7EAA, #FFE47A);
+    background-image: linear-gradient(to right, #3D7EAA, #FFE47A);
     width: 0;
     height: 100%;
 }

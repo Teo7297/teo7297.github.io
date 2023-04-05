@@ -5,7 +5,7 @@ let project = {
     "link": "",
     "descriprion": "",
     "tech_stack": [],
-    "video": "",
+    "video": [],
     "images": [],
     "contributors": []
 }
@@ -32,9 +32,9 @@ angelwrath.tech_stack = [
     "Communication channels: Discord/Telegram"
 ];
 
-angelwrath.video = ""//"https://youtube.com/embed/yaxInOyVBpY";
+angelwrath.video = ["https://youtube.com/embed/317SAoCYNJo", "https://youtube.com/embed/u90-3fZ-ufE", "https://youtube.com/embed/fETJhJRnNkQ"]   //"https://youtube.com/embed/yaxInOyVBpY";
 
-angelwrath.images = ["img/IRA_character.png",]//["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
+angelwrath.images = ["img/IRA_character.png", "img/diablo4.png"]//["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
 
 angelwrath.contributors = [
     "Selva Stefano - Project Lead, VFX, Game designer",
@@ -57,7 +57,7 @@ RPG.descriprion = "This is a simple RPG project I made while learning many of th
 
 RPG.link = "https://github.com/Teo7297/3D_RPG";
 
-RPG.video = "https://youtube.com/embed/ypLnMQzCsgM";
+RPG.video = ["https://youtube.com/embed/ypLnMQzCsgM",];
 
 RPG.tech_stack = [
     "Unity V2021 LTS",
@@ -91,7 +91,7 @@ skala.tech_stack = [
     "Google Suite (Docs, Jamboard)"
 ];
 
-skala.video = "https://youtube.com/embed/B7V9Hubs_AE";
+skala.video = ["https://youtube.com/embed/B7V9Hubs_AE",];
 
 skala.contributors = [
     "Buganza Nicolo' - Game Design, Programming, Team Lead",
@@ -122,7 +122,7 @@ openGL.tech_stack = [
     "Dear ImGui framework - Debug UI"
 ];
 
-openGL.video = "https://youtube.com/embed/kYR3sBq-Vyk";
+openGL.video = ["https://youtube.com/embed/kYR3sBq-Vyk",];
 
 openGL.contributors = [
     "Cavagnino Matteo",
@@ -145,7 +145,7 @@ piano_hero.tech_stack = [
     "GIT"
 ];
 
-piano_hero.video = "https://youtube.com/embed/Nz3FOKnwXrE";
+piano_hero.video = ["https://youtube.com/embed/Nz3FOKnwXrE",];
 
 piano_hero.contributors = [
     "Cavagnino Matteo",
@@ -161,7 +161,7 @@ movie_store.link = "https://github.com/Teo7297/movie_store";
 
 movie_store.descriprion = "Movie Store is a browser application that resembles how an online movie store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
 
-movie_store.video = "https://youtube.com/embed/r1UkrpU2yrE";
+movie_store.video = ["https://youtube.com/embed/r1UkrpU2yrE",];
 
 
 
@@ -408,10 +408,14 @@ function showProject(btn) {
     else { document.getElementById("proj-link").href = p.link; }
 
     document.getElementById("proj-link").innerText = p.link;
-    if (p.video != "") {
+    if (p.video.length > 0) {
         // document.getElementById("proj-video").style.paddingTop = "56.25%";
-        document.getElementById("proj-video").style.height = "45vw";
-        document.getElementById("proj-video").innerHTML = '<iframe class="responsiveiframe" allowfullscreen="allowfullscreen" src="' + p.video + '"</iframe>';
+        //document.getElementById("proj-video").style.height = "45vw";
+        let projvid = document.getElementById("proj-video");
+        projvid.innerHTML = "";
+        p.video.forEach(vid => {
+            projvid.innerHTML += '<iframe class="responsiveiframe" allowfullscreen="allowfullscreen" src="' + vid + '"</iframe></br>';
+        });
     }
     else {
         // document.getElementById("proj-video").style.paddingTop = "0%";
