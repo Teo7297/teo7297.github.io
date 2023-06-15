@@ -123,7 +123,7 @@ openGL.tech_stack = [
 ];
 
 //openGL.video = ["https://youtube.com/embed/kYR3sBq-Vyk",];
-openGL.video = ["https://youtube.com/embed/Cb18kXJW_1M",];
+openGL.video = ["https://youtube.com/embed/kYR3sBq-Vyk", "https://youtube.com/embed/Cb18kXJW_1M",];
 
 openGL.contributors = [
     "Cavagnino Matteo",
@@ -199,15 +199,39 @@ noteRec.tech_stack = [
     "LaTeX - Documentation"
 ];
 
+///////////////////////////////////////////////////////////////////////////
+
+let marsMarines = Object.assign({}, project);
+
+marsMarines.title = "Mars Marines";
+
+marsMarines.link = "";
+
+marsMarines.descriprion = "Mars Marines is a top down action shooter involving guns, power-ups and, most importantly, aliens! This project has been developed using Unreal Engine 5 and allowed me to learn many concepts and features of such engine.";
+
+marsMarines.video = ["https://youtube.com/embed/SpmD7Z6HmaE",];
+
+marsMarines.contributors = [
+    "Cavagnino Matteo",
+];
+
+marsMarines.tech_stack = [
+    "Unreal Engine 5.2",
+    "C++ / Blueprints",
+    "Visual Studio",
+];
+
+///////////////////////////////////////////////////////////////////////////
 
 let projects = {
     "angelwrath": angelwrath,
     "RPG": RPG,
-    "skala": skala,
+    "marsMarines": marsMarines,
+    //"skala": skala,
     "openGL": openGL,
-    "PHero": piano_hero,
-    "Movie-store": movie_store,
-    "LiraRecognizer": noteRec
+    //"PHero": piano_hero,
+    //"Movie-store": movie_store,
+    //"LiraRecognizer": noteRec
 };
 
 ////////////////////////////////////////////////////////////////////////
