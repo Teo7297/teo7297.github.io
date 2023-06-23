@@ -110,7 +110,7 @@ openGL.title = "OpenGL Learning Project";
 
 openGL.descriprion = "This project is the result of a learning path that included a few publicly available courses and books with the goal of learning the basics of computer graphics and OpenGL. I applied many core concepts of computer graphics like vertices, vertex buffers, index buffers, vertex arrays, shaders, materials, textures, MVP matrices and batch rendering. Overtime more features like 3D rendering, illumination, collisions and more will be added to the project. This project mainly contains basics about the above topics and is under current active development.";
 
-openGL.link = "https://github.com/Teo7297/OpenGL-Learning";
+openGL.link = "https://github.com/Teo7297/OpenGLBook";
 
 openGL.tech_stack = [
     "VSCode / Visual Studio",
