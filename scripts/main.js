@@ -261,11 +261,17 @@ let CAE = Object.assign({}, career);
 CAE.company = "CAE";
 CAE.location = "Italy, Sesto Calende(VA)";
 CAE.position = "Flight Simulators Software Engineer - Full Time";
-CAE.duration = "December 2022 - Actual Occupation";
+CAE.duration = "2022 - 2023";
+
+let acteon = Object.assign({}, career);
+acteon.company = "Acteon - De Götzen";
+acteon.location = "Italy, Fagnano Olona (VA)";
+acteon.position = "Computer Vision Engineer - Full Time";
+acteon.duration = "2023 - Actual Occupation";
 
 
 
-let careers = [CAE, alterna,];
+let careers = [acteon, CAE, alterna,];
 
 ////////////////////////////////////////////////////////////////////////
 
