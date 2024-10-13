@@ -584,7 +584,7 @@ function buttonSelected(element) {
             researches.forEach(rsc => {
                 cont.innerHTML = "<h2 style='text-align: center; max-width: 70vw''>" + rsc.title + "</h2>";
                 cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.descriprion + "</h4>";
-                cont.innerHTML += "</br></br><h2>Game Links</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
+                cont.innerHTML += "</br></br><h2>Github Link</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
             });
             break;
         case "studies-Button":
