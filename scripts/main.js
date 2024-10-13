@@ -473,7 +473,24 @@ function showProject(btn) {
         let projvid = document.getElementById("proj-video");
         projvid.innerHTML = "";
         p.video.forEach(vid => {
-            projvid.innerHTML += '<iframe class="responsiveiframe" allowfullscreen="allowfullscreen" src="' + vid + '"</iframe></br>';
+            const iframe = document.createElement('iframe');
+            iframe.className = 'responsiveiframe';
+            iframe.allowFullscreen = true;
+            iframe.src = vid;
+
+            // Append the iframe to the projvid
+            projvid.appendChild(iframe);
+
+            // Access the iframe's content after it loads
+            iframe.onload = function () {
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const images = iframeDoc.getElementsByTagName('img');
+
+                for (let img of images) {
+                    img.style.width = "100%"; // Set width to 100%
+                    img.style.height = "auto"; // Optional: maintain aspect ratio
+                }
+            };
         });
     }
     else {
