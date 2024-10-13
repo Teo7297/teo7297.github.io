@@ -10,6 +10,35 @@ let project = {
     "contributors": []
 }
 
+////////////////////////////////////////////////////////////////////////
+
+
+let Zombie = Object.assign({}, project);
+
+Zombie.title = "Zombie++";
+
+Zombie.descriprion = "This is a simple 3D First Person Shooter heavily inspired to the classic Call of Duty: Zombies franchise, with all the main features and some added tweaks for a more fun and smooth gameplay. This project is bigger than it seems, with many integrated gameplay features, such as multiple perks, modular weapon system, modular stats for both the player and the zombies, subdivision between match logic, gamemode and gameworld settings; this and much more! Please feel free to give it a quick try on itch.io";
+
+Zombie.link = "https://realishak.itch.io/zombiepp";
+
+Zombie.video = ["gifs/Equip_Gun.gif", "gifs/Freeze.gif", "gifs/Shock.gif", "gifs/Wolf.gif", "gifs/XRay.gif", "gifs/ZombShell.gif", "https://youtube.com/embed/3-PnnXMjHvE"];
+
+Zombie.tech_stack = [
+    "Unity V2021 LTS",
+    "C#",
+    "VSCode",
+    "GIT",
+    "Google suite (Docs, Sheets)"
+];
+
+Zombie.contributors = [
+    "Cavagnino Matteo",
+    "Rosti Alessandro (Audio)"
+];
+
+////////////////////////////////////////////////////////////////////////
+
+
 let angelwrath = Object.assign({}, project);
 
 angelwrath.title = "I.R.A. Project (Active Development)";
@@ -224,7 +253,8 @@ marsMarines.tech_stack = [
 ///////////////////////////////////////////////////////////////////////////
 
 let projects = {
-    "angelwrath": angelwrath,
+    "Zombie": Zombie,
+    // "angelwrath": angelwrath,
     "RPG": RPG,
     "marsMarines": marsMarines,
     //"skala": skala,
@@ -241,32 +271,42 @@ let career = {
     "company": "",
     "location": "",
     "position": "",
+    "description": "",
+    "tech": "",
     "duration": ""
 };
 
 let careerHTML1 = '</div><h2>Company</h2><div>';
 let careerHTML2 = "</div><br><br><h3>Location</h3><div>";
 let careerHTML3 = "</div><br><br><h3>Job position</h3><div>";
-let careerHTML4 = "</div><br><br><h3>Duration</h3><div>";
-let careerHTML5 = '</div><div><hr class="thin"></div>';
+let careerHTML4 = "</div><br><br><h3>Job description</h3><div>";
+let careerHTML5 = "</div><br><br><h3>Technology used</h3><div>";
+let careerHTML6 = "</div><br><br><h3>Duration</h3><div>";
+let careerHTML7 = '</div><div><hr class="thin"></div>';
 
 
 let alterna = Object.assign({}, career);
 alterna.company = "Altea Federation - Alterna";
 alterna.location = "Italy, Lainate(MI)";
 alterna.position = "Software developer - Internship";
+alterna.description = "I performed a brief internship on Microsoft 365 / Dynamics ERP systems."
+alterna.tech = "Microsoft internal tools"
 alterna.duration = "4 months (May 2021 - September 2021)";
 
 let CAE = Object.assign({}, career);
 CAE.company = "CAE";
 CAE.location = "Italy, Sesto Calende(VA)";
 CAE.position = "Flight Simulators Software Engineer - Full Time";
+CAE.description = "My work here was mainly on helicopters full-flight simulators, I worked on complex systems such as flight-controls, electric system and, in the last few months, I specialized on the rendering engine."
+CAE.tech = "C/C++, XML, Internal tools"
 CAE.duration = "2022 - 2023";
 
 let acteon = Object.assign({}, career);
 acteon.company = "Acteon - De Götzen";
 acteon.location = "Italy, Fagnano Olona (VA)";
 acteon.position = "Computer Vision Engineer - Full Time";
+acteon.description = "I work in the R&D department of a high-tech medical company, developing a new intraoral scanner for dentists that is capable of reconstructing 3D models of teeth using stereo-vision. In this project I worked on many aspects of the device, such as mesh post-processing, core data structures, bite registration and point cloud pre-processing. I studied, implemented and optimized various algorithms from scientific papers and adopted the most modern industry standards in terms of code."
+acteon.tech = "C/C++, CUDA, QT, Python, Batch, CMake, OpenGL, CloudCompare, Various big libraries (PCL, Eigen, Thrust, Boost)"
 acteon.duration = "2023 - Actual Occupation";
 
 
@@ -288,61 +328,49 @@ let skillHTML4 = "%</div></div>";
 
 let java = Object.assign({}, skill);
 java.name = "Java";
-java.level = 88;
+java.level = 70;
 let python = Object.assign({}, skill);
 python.name = "Python";
-python.level = 75;
+python.level = 60;
 let javascript = Object.assign({}, skill);
 javascript.name = "JavaScript";
-javascript.level = 65;
+javascript.level = 50;
 let css = Object.assign({}, skill);
 css.name = "CSS";
-css.level = 60;
+css.level = 50;
 let html = Object.assign({}, skill);
 html.name = "HTML5";
-html.level = 68;
+html.level = 50;
 let csharp = Object.assign({}, skill);
 csharp.name = "C#";
-csharp.level = 75;
+csharp.level = 70;
 let unity = Object.assign({}, skill);
 unity.name = "Unity";
 unity.level = 75;
 let c = Object.assign({}, skill);
 c.name = "C";
-c.level = 50;
+c.level = 60;
 let cpp = Object.assign({}, skill);
 cpp.name = "C++";
-cpp.level = 69;
+cpp.level = 80;
 let opengl = Object.assign({}, skill);
 opengl.name = "OpenGL";
-opengl.level = 40;
+opengl.level = 50;
 let cmake = Object.assign({}, skill);
 cmake.name = "CMake";
-cmake.level = 60;
-// let vscode = Object.assign({}, skill);
-// vscode.name = "VSCode";
-// vscode.level = 90;
-// let vs = Object.assign({}, skill);
-// vs.name = "Visual Studio";
-// vs.level = 70;
-// let english = Object.assign({}, skill);
-// english.name = "English";
-// english.level = 85;
-// let italian = Object.assign({}, skill);
-// italian.name = "Italian";
-// italian.level = 96;
+cmake.level = 65;
 let plsql = Object.assign({}, skill);
 plsql.name = "PL/SQL";
-plsql.level = 65;
+plsql.level = 50;
 let mongoDB = Object.assign({}, skill);
 mongoDB.name = "MongoDB";
-mongoDB.level = 60;
+mongoDB.level = 50;
 let git = Object.assign({}, skill);
 git.name = "GIT";
-git.level = 70;
+git.level = 75;
 let linux = Object.assign({}, skill);
 linux.name = "LINUX";
-linux.level = 67;
+linux.level = 50;
 
 let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, plsql, mongoDB, git, linux];
 
@@ -516,7 +544,7 @@ function buttonSelected(element) {
             cont = document.getElementById("careers-container");
             cont.innerHTML = "";
             careers.forEach(crr => {
-                cont.innerHTML += careerHTML1 + crr.company + careerHTML2 + crr.location + careerHTML3 + crr.position + careerHTML4 + crr.duration + careerHTML5;
+                cont.innerHTML += careerHTML1 + crr.company + careerHTML2 + crr.location + careerHTML3 + crr.position + careerHTML4 + crr.description + careerHTML5 + crr.tech + careerHTML6 + crr.duration + careerHTML7;
             });
             break;
         case "skills-Button":
@@ -539,7 +567,7 @@ function buttonSelected(element) {
             researches.forEach(rsc => {
                 cont.innerHTML = "<h2 style='text-align: center; max-width: 70vw''>" + rsc.title + "</h2>";
                 cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.descriprion + "</h4>";
-                cont.innerHTML += "</br></br><h2>Github link</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
+                cont.innerHTML += "</br></br><h2>Game Links</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
             });
             break;
         case "studies-Button":

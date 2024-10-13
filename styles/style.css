@@ -270,6 +270,16 @@ hr.thin {
     margin-bottom: 20vh;
     color: white;
     font-family: finlandica;
+    width: 60%;
+    /* Default for larger screens */
+}
+
+/* Media query for mobile devices (screens narrower than 768px) */
+@media (max-width: 768px) {
+    #careers-container {
+        width: 85%;
+        /* For smaller screens */
+    }
 }
 
 #skillspage {
