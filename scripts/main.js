@@ -480,7 +480,7 @@ function showProject(btn) {
 
             // Append the iframe to the projvid
             projvid.appendChild(iframe);
-
+            iframe.classList.add(".img-responsive")
             // Access the iframe's content after it loads
             iframe.onload = function () {
                 const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
