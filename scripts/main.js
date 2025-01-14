@@ -17,7 +17,7 @@ let Zombie = Object.assign({}, project);
 
 Zombie.title = "Zombie++";
 
-Zombie.descriprion = "This is a simple 3D First Person Shooter heavily inspired to the classic Call of Duty: Zombies franchise, with all the main features and some added tweaks for a more fun and smooth gameplay. This project is bigger than it seems, with many integrated gameplay features, such as multiple perks, modular weapon system, modular stats for both the player and the zombies, subdivision between match logic, gamemode and gameworld settings; this and much more! Please feel free to give it a quick try on itch.io";
+Zombie.descriprion = "This is a simple 3D First Person Shooter heavily inspired to the classic Call of Duty: Zombies franchise, with all the main features and some added tweaks for a more fun and smooth gameplay. This project is bigger than it seems, with many integrated gameplay features, such as multiple perks, modular weapon system, modular stats for both the player and the zombies, subdivision between match logic, gamemode and gameworld settings; this and much more! Please feel free to give it a quick try on itch.io. Note: I'm not an artist nor I have interest in producing an artistic result, my objective was to learn how features are implemented in this kind of games and I implemented them always keeping an eye on performance and reliability.";
 
 Zombie.link = "https://realishak.itch.io/zombiepp";
 
@@ -153,7 +153,9 @@ openGL.tech_stack = [
 
 //openGL.video = ["https://youtube.com/embed/kYR3sBq-Vyk",];
 // openGL.video = ["https://youtube.com/embed/kYR3sBq-Vyk", "https://youtube.com/embed/Cb18kXJW_1M",];
-openGL.video = ["https://youtube.com/embed/Cb18kXJW_1M",];
+openGL.video = ["https://youtube.com/embed/Cb18kXJW_1M", "https://youtube.com/embed/NkormSukO_A"];
+
+openGL.images = ["img/bloom.png"];
 
 openGL.contributors = [
     "Cavagnino Matteo",
