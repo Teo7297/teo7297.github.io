@@ -393,7 +393,7 @@ let research = {
 let thesis = Object.assign({}, research);
 thesis.title = "Design and Development of an Assurance Methodology for Security Certifications in Highly Dynamic Architectures";
 thesis.descriprion = "This is my research and development master degree thesis developed at Universita' degli Studi di Milano. The thesis work is about security certifications in highly dynamic architectures such as Cloud and IoT systems. The work is written in English and compiled with LaTeX."
-thesis.link = "https://github.com/Teo7297/Bachelor-Degree-Thesis/blob/main/THESIS.pdf"
+thesis.link = "https://github.com/Teo7297/Master-Degree-Thesis/blob/main/THESIS.pdf"
 
 
 let researches = [thesis,];
