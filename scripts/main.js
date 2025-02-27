@@ -3,12 +3,114 @@
 let project = {
     "title": "",
     "link": "",
-    "descriprion": "",
+    "description": "",
     "tech_stack": [],
     "video": [],
     "images": [],
     "contributors": []
 }
+////////////////////////////////////////////////////////////////////////
+
+let ShakEngine = Object.assign({}, project);
+
+ShakEngine.title = "ShakEngine";
+
+ShakEngine.description = `2D game engine developed from scratch using C++, OpenGL and the SFML library. The engine offers the following main features:</br></br>
+
+- Tree-like scene hierarchy with Entity-Component design (similar to Unity)</br>
+- Game objects pooling</br>
+- SceneGraph quadtree collision optimization</br>
+- Scene and objects life-time management </br>
+- Fully customizable particle sytems (batched points and sprites)</br>
+- Fully customizable trail renderer</br>
+- Audio management</br>
+- UI (with Dear ImGUI widgets)</br>
+- TextureAtlases and sprite-sheet animations</br>
+- Shader hot-reloading</br>
+- JSON parser</br>
+- Resource management (textures, audio, shaders, ecc)</br>
+- Automatic assets binarization for build distribution</br>
+- Automatic parallax background integration with multiple 2D cameras</br></br>
+
+Here follows an example of scene initialization in the engine:</br></br>
+<div style="background-color:rgb(40, 51, 79); padding: 1em;">
+<pre>
+<code>
+class TestGameScene : public shak::Scene
+{
+public:
+    ~TestGameScene() override
+    {
+        std::cout << "Test scene destroyed" << std::endl;
+    }
+
+    void Init() override
+    {
+        // Get resource manager
+        auto rm = m_engine->GetResourceManager();
+
+        // Setup camera and parallax background
+        auto bgTexture = rm->LoadTexture("assets/textures/bg1.jpg", "bg1", true);
+        auto bg = m_engine->AddGameObject&lt;shak::Background&gt;(bgTexture, sf::Vector2f(1920.f, 1080.f));
+        auto bgsize = bgTexture->getSize();
+
+        auto camera1 = m_renderer->AddCamera("camera1", sf::FloatRect({ 0, 0 }, { 1920, 1080 }));
+        camera1->SetBackground(bg);
+        camera1->SetBackgroundSize({ (float)(bgsize.x * 100), (float)(bgsize.y * 100) });
+
+        // Load player and AI ships stats and initialize them
+        json::JSON jsonData = json::JSON::LoadFromDisk("assets/json/ships/DPS.json");
+
+        auto player = m_engine->AddGameObject&lt;Ship&gt;(jsonData);
+        player->Name = "Player";
+        player->AddComponent&lt;PlayerController&gt;();
+        player->AddChild(camera1); // Attach camera to player
+        camera1->setPosition(player->getPosition());
+
+        // Spawn 3 aliens
+        for (int i = 0; i &lt; 3; i++)
+        {
+            auto alien = m_engine->AddGameObject&lt;Ship&gt;(jsonData);
+            alien->AddComponent&lt;AIController&gt;();
+            alien->Name = "Alien" + std::to_string(i);
+        }
+
+        // Add HUD UI
+        m_engine->AddUIElement&lt;HUD&gt;("HUD");
+        m_engine->SelectActiveUI("HUD");
+
+        // Play some background music
+        auto music = rm->LoadMusic("assets/audio/AgainstAllOdds.wav", "AgainstAllOdds");
+        music->setLooping(true);
+        music->setVolume(25.f);
+        music->play();
+    }
+
+    void Clear() override
+    {
+        m_renderer->RemoveCamera("camera1");
+    }
+};
+</code>
+</pre>
+</div>`;
+
+ShakEngine.link = "https://github.com/Teo7297/ShakEngine";
+
+ShakEngine.tech_stack = [
+    "C++",
+    "CMake",
+    "GLSL",
+    "Visual Studio",
+    "GIT",
+    "SFML",
+    "OpenGL",
+    "Dear ImGui"
+];
+
+ShakEngine.video = ["https://youtube.com/embed/L-5xh_M2vTc"]
+
+ShakEngine.contributors = ["Cavagnino Matteo"];
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -17,11 +119,11 @@ let Zombie = Object.assign({}, project);
 
 Zombie.title = "Zombie++";
 
-Zombie.descriprion = "This is a simple 3D First Person Shooter heavily inspired to the classic Call of Duty: Zombies franchise, with all the main features and some added tweaks for a more fun and smooth gameplay. This project is bigger than it seems, with many integrated gameplay features, such as multiple perks, modular weapon system, modular stats for both the player and the zombies, subdivision between match logic, gamemode and gameworld settings; this and much more! Please feel free to give it a quick try on itch.io. Note: I'm not an artist nor I have interest in producing an artistic result, my objective was to learn how features are implemented in this kind of games and I implemented them always keeping an eye on performance and reliability.";
+Zombie.description = "This is a simple 3D First Person Shooter heavily inspired to the classic Call of Duty: Zombies franchise, with all the main features and some added tweaks for a more fun and smooth gameplay. This project is bigger than it seems, with many integrated gameplay features, such as multiple perks, modular weapon system, modular stats for both the player and the zombies, subdivision between match logic, gamemode and gameworld settings; this and much more! Please feel free to give it a quick try on itch.io. Note: I'm not an artist nor I have interest in producing an artistic result, my objective was to learn how features are implemented in this kind of games and I implemented them always keeping an eye on performance and reliability.";
 
 Zombie.link = "https://realishak.itch.io/zombiepp";
 
-Zombie.video = ["gifs/Equip_Gun.gif", "gifs/Freeze.gif", "gifs/Shock.gif", "gifs/Wolf.gif", "gifs/XRay.gif", "gifs/ZombShell.gif", "https://youtube.com/embed/3-PnnXMjHvE"];
+Zombie.video = ["gifs/Shock.gif", "https://youtube.com/embed/3-PnnXMjHvE"];
 
 Zombie.tech_stack = [
     "Unity V2021 LTS",
@@ -38,106 +140,11 @@ Zombie.contributors = [
 
 ////////////////////////////////////////////////////////////////////////
 
-
-let angelwrath = Object.assign({}, project);
-
-angelwrath.title = "I.R.A. Project (Active Development)";
-
-angelwrath.thumbnail = "";
-
-angelwrath.descriprion = "I.R.A. is my first big project, especially working with others, and it is currently under active development. Our team aims to produce a gameplay-focused, fast-paced action first-person shooter set in hell-inspired environments that will present many gameplay elements from classic games like Quake and Doom. Moreover, the game will offer Roguelite mechanics. The project's main focus goes into the \"Gameplay moment\" design that our players look for during their sessions. The project is in early development stages and this page will be updated frequently.";
-
-angelwrath.link = "Private Project";
-
-angelwrath.tech_stack = [
-    "Unity V2021 LTS",
-    "C#",
-    "Python",
-    "VSCode/Visual Studio",
-    "GIT",
-    "Blender",
-    "Maya",
-    "Google Suite (Drive, Docs, Sheets, Jamboard)",
-    "Communication channels: Discord/Telegram"
-];
-
-angelwrath.video = ["https://youtube.com/embed/317SAoCYNJo", "https://youtube.com/embed/u90-3fZ-ufE", "https://youtube.com/embed/fETJhJRnNkQ"]   //"https://youtube.com/embed/yaxInOyVBpY";
-
-angelwrath.images = ["img/IRA_character.png", "img/diablo4.png"]//["img/IRA_arena.png", "img/IRA_character.png", "img/IRA_revolver.png"];
-
-angelwrath.contributors = [
-    "Selva Stefano - Project Lead, VFX, Game designer",
-    "Cavagnino Matteo - Programming, Game designer",
-    "Lamperti Ivan - Programming",
-    "Bodini Andrea - Programming",
-    "Natalia - Concept artist, textures and UI designer",
-    "Marco - 3D Model Artist, Rigging",
-];
-
-
-////////////////////////////////////////////////////////////////////////
-
-
-let RPG = Object.assign({}, project);
-
-RPG.title = "3D Learning RPG";
-
-RPG.descriprion = "This is a simple RPG project I made while learning many of the advanced features of the Unity game engine. My main focus here was to learn how to structure big games' projects, approach new feature insertion and what tools Unity offers to accomplish such tasks.";
-
-RPG.link = "https://github.com/Teo7297/3D_RPG";
-
-RPG.video = ["https://youtube.com/embed/ypLnMQzCsgM",];
-
-RPG.tech_stack = [
-    "Unity V2021 LTS",
-    "C#",
-    "VSCode",
-    "GIT",
-    "Google suite (Docs, Sheets)"
-];
-
-RPG.contributors = [
-    "Cavagnino Matteo",
-];
-
-////////////////////////////////////////////////////////////////////////
-
-let skala = Object.assign({}, project);
-
-skala.title = "SKALA";
-
-skala.descriprion = "The SKALA project was a simple game developed during the University class of Online Game Design. As the title implies, the course focused on the design and theory parts but included a final small game project to concretize the design knowledge acquired. SKALA is an online multiplayer puzzle game that pushes players to race each other in the climb of a big tower made out of cubes, which need to be moved around correctly to allow progress. Players are pushed by the growing fire underneath and are slowed down by other players' objects. The players can acquire some bonus or malus items by completing random minigames hidden around the level.";
-
-skala.link = "https://github.com/itsNikk/OGD2021_SKALA";
-
-skala.tech_stack = [
-    "Unity V2019 LTS",
-    "C#",
-    "Mirror - Networking",
-    "Amazon Web Services - Online server",
-    "Jetbrains Rider / Visual Studio",
-    "GIT",
-    "Google Suite (Docs, Jamboard)"
-];
-
-skala.video = ["https://youtube.com/embed/B7V9Hubs_AE",];
-
-skala.contributors = [
-    "Buganza Nicolo' - Game Design, Programming, Team Lead",
-    "Cavagnino Matteo - Game Design, Programming",
-    "Davanzo Riccardo - Game Design, Programming",
-    "Leonardi Deborah - Art Design, Story Telling",
-    "Corsalini Lorenzo - Music",
-    "Braut Virginia - 3D Models Art"
-];
-
-////////////////////////////////////////////////////////////////////////
-
 let openGL = Object.assign({}, project);
 
 openGL.title = "OpenGL Learning Project";
 
-openGL.descriprion = "This project is the result of a learning path that included a few publicly available courses and books with the goal of learning the basics of computer graphics and OpenGL. I applied many core concepts of computer graphics like vertices, vertex buffers, index buffers, vertex arrays, shaders, materials, textures, MVP matrices and batch rendering. Overtime more features like 3D rendering, illumination, collisions and more will be added to the project. This project mainly contains basics about the above topics and is under current active development.";
+openGL.description = "This project is the result of a learning path that included a few publicly available courses and books with the goal of learning the basics of computer graphics and OpenGL. I applied many core concepts of computer graphics like vertices, vertex buffers, index buffers, vertex arrays, shaders, materials, textures, MVP matrices and batch rendering. Overtime more features like 3D rendering, illumination, collisions and more will be added to the project. This project mainly contains basics about the above topics and is under current active development.";
 
 openGL.link = "https://github.com/Teo7297/OpenGL-Learning";
 
@@ -161,76 +168,6 @@ openGL.contributors = [
     "Cavagnino Matteo",
 ];
 
-////////////////////////////////////////////////////////////////////////
-let piano_hero = Object.assign({}, project);
-
-piano_hero.title = "Musical Notes Learning Game";
-
-piano_hero.link = "https://github.com/Teo7297/ProgettoProgMusica";
-
-piano_hero.descriprion = "This small game was developed as a project for the University course Musical Programming and is what sparked the joy of making videogames in me. The game is basic and simple and was developed using only Java; it aims to teach how to read complex notes on a stave with all the possible musical clefs. The player will have to play the notes on a virtual keyboard and eventually receive positive or negative feedback.";
-
-piano_hero.tech_stack = [
-    "Java 8",
-    "Java Swing library",
-    "Maven",
-    "Jetbrains Intellij",
-    "GIT"
-];
-
-piano_hero.video = ["https://youtube.com/embed/Nz3FOKnwXrE",];
-
-piano_hero.contributors = [
-    "Cavagnino Matteo",
-];
-
-
-////////////////////////////////////////////////////////////////////////
-let movie_store = Object.assign({}, project);
-
-movie_store.title = "Movie Store";
-
-movie_store.link = "https://github.com/Teo7297/movie_store";
-
-movie_store.descriprion = "Movie Store is a browser application that resembles how an online movie store might work. I developed this project during the University course on Web and Cloud Programming. The application is pretty straightforward and allows store owners to register their online store and insert the movies they sell, selecting them from the catalogue offered by TheMovieDB. Finally, \"normal\" users can register an account and buy movies from the many registered stores using the preferred payment method. The purchased movies are then grouped into the user's library. The project also made good use of browsers' built-in features like cookies and storage.";
-
-movie_store.video = ["https://youtube.com/embed/r1UkrpU2yrE",];
-
-
-
-movie_store.tech_stack = [
-    "VSCode",
-    "HTML, CSS, JavaScript",
-    "TheMovieDB WEBAPI",
-    "LaTeX - Documentation"
-];
-
-movie_store.contributors = [
-    "Cavagnino Matteo",
-];
-
-////////////////////////////////////////////////////////////////////////
-let noteRec = Object.assign({}, project);
-
-noteRec.title = "Turkish Lira Recognizer";
-
-noteRec.link = "https://github.com/sebacaccaro/Progetto_AFMD";
-
-noteRec.descriprion = "The Turkish Lira Recognizer was developed during the University course \"Algorithms For Massive Datasets\". It consists of a Convolutional Neural Network model developed with the goal of recognizing Turkish Lira Banknotes.";
-
-noteRec.contributors = [
-    "Cavagnino Matteo",
-    "Caccaro Sebastiano"
-];
-
-noteRec.tech_stack = [
-    "Python3",
-    "Jupyter Notebooks",
-    "TensorFlow, PIL, Numpy, Matplotlib libraries",
-    "Kaggle API",
-    "LaTeX - Documentation"
-];
-
 ///////////////////////////////////////////////////////////////////////////
 
 let marsMarines = Object.assign({}, project);
@@ -239,7 +176,7 @@ marsMarines.title = "Mars Marines";
 
 marsMarines.link = "";
 
-marsMarines.descriprion = "Mars Marines is a top down action shooter involving guns, power-ups and, most importantly, aliens! This project has been developed using Unreal Engine 5 and allowed me to learn many concepts and features of such engine.";
+marsMarines.description = "Mars Marines is a top down action shooter involving guns, power-ups and, most importantly, aliens! This project has been developed using Unreal Engine 5 and allowed me to learn many concepts and features of such engine.";
 
 marsMarines.video = ["https://youtube.com/embed/SpmD7Z6HmaE",];
 
@@ -256,15 +193,10 @@ marsMarines.tech_stack = [
 ///////////////////////////////////////////////////////////////////////////
 
 let projects = {
+    "ShakEngine": ShakEngine,
     "Zombie": Zombie,
-    // "angelwrath": angelwrath,
-    "RPG": RPG,
     "marsMarines": marsMarines,
-    //"skala": skala,
     "openGL": openGL,
-    //"PHero": piano_hero,
-    //"Movie-store": movie_store,
-    //"LiraRecognizer": noteRec
 };
 
 ////////////////////////////////////////////////////////////////////////
@@ -307,7 +239,7 @@ CAE.duration = "2022 - 2023";
 let acteon = Object.assign({}, career);
 acteon.company = "Acteon - De Götzen";
 acteon.location = "Italy, Fagnano Olona (VA)";
-acteon.position = "Computer Vision Engineer - Full Time";
+acteon.position = "Advanced Algorithms R&D Engineer - Full Time";
 acteon.description = "I work in the R&D department of a high-tech medical company, developing a new intraoral scanner for dentists that is capable of reconstructing 3D models of teeth using stereo-vision. In this project I worked on many aspects of the device, such as mesh post-processing, core data structures, bite registration and point cloud pre-processing. I studied, implemented and optimized various algorithms from scientific papers and adopted the most modern industry standards in terms of code."
 acteon.tech = "C/C++, CUDA, QT, Python, Batch, CMake, OpenGL, CloudCompare, Various big libraries (PCL, Eigen, Thrust, Boost)"
 acteon.duration = "2023 - Actual Occupation";
@@ -337,13 +269,13 @@ python.name = "Python";
 python.level = 60;
 let javascript = Object.assign({}, skill);
 javascript.name = "JavaScript";
-javascript.level = 50;
+javascript.level = 40;
 let css = Object.assign({}, skill);
 css.name = "CSS";
-css.level = 50;
+css.level = 30;
 let html = Object.assign({}, skill);
 html.name = "HTML5";
-html.level = 50;
+html.level = 40;
 let csharp = Object.assign({}, skill);
 csharp.name = "C#";
 csharp.level = 70;
@@ -362,20 +294,17 @@ opengl.level = 50;
 let cmake = Object.assign({}, skill);
 cmake.name = "CMake";
 cmake.level = 65;
-let plsql = Object.assign({}, skill);
-plsql.name = "PL/SQL";
-plsql.level = 50;
-let mongoDB = Object.assign({}, skill);
-mongoDB.name = "MongoDB";
-mongoDB.level = 50;
 let git = Object.assign({}, skill);
 git.name = "GIT";
 git.level = 75;
 let linux = Object.assign({}, skill);
 linux.name = "LINUX";
 linux.level = 50;
+let unreal = Object.assign({}, skill);
+unreal.name = "Unreal Engine";
+unreal.level = 30;
 
-let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, plsql, mongoDB, git, linux];
+let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, git, linux, unreal];
 
 skills.sort((a, b) => b.level - a.level); // reverse order sorting
 
@@ -392,7 +321,7 @@ let research = {
 
 let thesis = Object.assign({}, research);
 thesis.title = "Design and Development of an Assurance Methodology for Security Certifications in Highly Dynamic Architectures";
-thesis.descriprion = "This is my research and development master degree thesis developed at Universita' degli Studi di Milano. The thesis work is about security certifications in highly dynamic architectures such as Cloud and IoT systems. The work is written in English and compiled with LaTeX."
+thesis.description = "This is my research and development master degree thesis developed at Universita' degli Studi di Milano. The thesis work is about security certifications in highly dynamic architectures such as Cloud and IoT systems. The work is written in English and compiled with LaTeX."
 thesis.link = "https://github.com/Teo7297/Master-Degree-Thesis/blob/main/THESIS.pdf"
 
 
@@ -507,7 +436,7 @@ function showProject(btn) {
     p.tech_stack.forEach(element => {
         document.getElementById("proj-tech").innerHTML += '<div>' + element + '</div>';
     });
-    document.getElementById("proj-desc").innerText = p.descriprion;
+    document.getElementById("proj-desc").innerHTML = p.description;
 
     p.contributors.forEach(element => {
         document.getElementById("proj-contributors").innerHTML += '<div>' + element + '</div>';
@@ -519,7 +448,7 @@ function resetProjectSection() {
     document.getElementById("proj-link").href = "";
     document.getElementById("proj-link").innerText = "";
     document.getElementById("proj-tech").innerHTML = "";
-    document.getElementById("proj-desc").innerText = "";
+    document.getElementById("proj-desc").innerHTML = "";
     document.getElementById("proj-video").innerHTML = "";
     document.getElementById("proj-img").innerHTML = "";
     document.getElementById("proj-contributors").innerHTML = "";
@@ -586,7 +515,7 @@ function buttonSelected(element) {
             cont.innerHTML = "";
             researches.forEach(rsc => {
                 cont.innerHTML = "<h2 style='text-align: center; max-width: 70vw''>" + rsc.title + "</h2>";
-                cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.descriprion + "</h4>";
+                cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + rsc.description + "</h4>";
                 cont.innerHTML += "</br></br><h2>Github Link</h2><a id='proj-link' href='" + rsc.link + "' style='text-align: center;'>" + rsc.link + "</a>";
             });
             break;
