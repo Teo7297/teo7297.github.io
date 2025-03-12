@@ -360,6 +360,36 @@ let studyHTML5 = '</div><div><hr class="thin"></div>';
 
 
 ////////////////////////////////////////////////////////////////////////
+
+//jams
+
+let jam = {
+    "name": "",
+    "description": "",
+    "ranking": "",
+    "duration": "",
+    "title": "",
+    "link": "",
+    "tech": "",
+    "contributors": [],
+    // "video": ""
+};
+
+let adsAtWar = Object.assign({}, jam);
+adsAtWar.name = "Mini Jame Gam #40";
+adsAtWar.description = "This is a mini game jam project developed in 72 hours. The theme was 'Annoying Ads' and it was required to add a special object in the game, which was 'turret'. The game is a 2D incremental shooter where the player, represented by an upgradable car that moves automatically, has to click and shoot down road ads signs. The game is developed in C++ using my game engine \"ShakEngine\".";
+adsAtWar.ranking = "Out of 116 entries, I obtained 15th place in the overall category and 8th place in the gameplay and fun categories.";
+adsAtWar.title = "Ads At War";
+adsAtWar.duration = "72 hours";
+adsAtWar.link = '<iframe frameborder="0" src="https://itch.io/embed/3385064" width="552" height="167"><a href="https://realishak.itch.io/ads-at-war">Ads at War by Realishak</a></iframe>';
+adsAtWar.tech = "C++, ShakEngine, Aseprite (art), Audacity (audio)";
+adsAtWar.contributors = ["Cavagnino Matteo"];
+// atsAtWar.video = "https://youtube.com/embed/";
+
+
+let jams = [adsAtWar,];
+
+
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -525,6 +555,23 @@ function buttonSelected(element) {
             cont.innerHTML = "";
             studies.forEach(std => {
                 cont.innerHTML += studyHTML1 + std.University + studyHTML2 + std.Faculty + studyHTML3 + std.Years + studyHTML4 + std.Concluded + studyHTML5;
+            });
+            break;
+        case "jams-Button":
+            current_page = document.getElementById("jampage");
+            cont = document.getElementById("jamcontainer");
+            cont.innerHTML = "";
+            jams.forEach(jam => {
+                // build html contant that shows all jam data
+                cont.innerHTML += "<h2 style='text-align: center; max-width: 70vw''>" + jam.name + "</h2>";
+                cont.innerHTML += "<h4 style='text-align: center; max-width: 60vw'>" + jam.title + "</h4>";
+                cont.innerHTML += "</br></br><h4 style='text-align: center; max-width: 60vw'>" + jam.description + "</h4>";
+                cont.innerHTML += "</br></br><h2>Ranking</h2><div style='text-align: center;'>" + jam.ranking + "</div>";
+                cont.innerHTML += "</br></br><h2>Duration</h2><div style='text-align: center;'>" + jam.duration + "</div>";
+                cont.innerHTML += "</br></br><h2>Link</h2><a id='proj-link' href='" + jam.link + "' style='text-align: center;'>" + jam.link + "</a>";
+                cont.innerHTML += "</br></br><h2>Technology used</h2><div style='text-align: center;'>" + jam.tech + "</div>";
+                cont.innerHTML += "</br></br><h2>Contributors</h2><div style='text-align: center;'>" + jam.contributors + "</div>";
+                cont.innerHTML += '</br></div><div><hr class="thin"></div></br>';
             });
             break;
 

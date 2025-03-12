@@ -343,14 +343,14 @@ hr.thin {
 
 
 
-#researchpage {
+#researchpage, #jampage {
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#researchcontainer {
+#researchcontainer, #jamcontainer {
     display: flex;
     width: 100%;
     flex-direction: column;
