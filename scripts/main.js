@@ -303,8 +303,11 @@ linux.level = 50;
 let unreal = Object.assign({}, skill);
 unreal.name = "Unreal Engine";
 unreal.level = 30;
+let CUDA = Object.assign({}, skill);
+CUDA.name = "CUDA";
+CUDA.level = 60;
 
-let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, git, linux, unreal];
+let skills = [java, python, javascript, html, css, csharp, unity, c, cpp, opengl, cmake, git, linux, unreal, CUDA];
 
 skills.sort((a, b) => b.level - a.level); // reverse order sorting
 
