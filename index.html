@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#081617">
+    <meta name="description" content="Matteo Cavagnino is a software engineer focused on C++, high-performance systems, CUDA, computer graphics, and 3D computer vision.">
+    <meta property="og:title" content="Matteo Cavagnino — Software Engineer">
+    <meta property="og:description" content="C++, high-performance systems, computer graphics, and 3D computer vision.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/Portrait.png">
+    <title>Matteo Cavagnino — Software Engineer</title>
+    <link rel="icon" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="preload" href="styles/fonts/Finlandica/Finlandica-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Matteo Cavagnino, home">MC<span>.</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a>
+        </nav>
+        <a class="nav-contact" href="mailto:matteo.cavagnino.mc@gmail.com">Get in touch</a>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="top" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Software engineer · Italy</p>
+                <h1 id="hero-title">I build fast, reliable software for <em>complex systems.</em></h1>
+                <p class="hero-intro">I’m Matteo, a software engineer specializing in C++, high-performance computing, CUDA-accelerated algorithms, computer graphics, and 3D environments.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+                    <a class="button button-secondary" href="files/Resume_Cavagnino_Matteo.pdf" target="_blank" rel="noopener">View résumé <span aria-hidden="true">↗</span></a>
+                </div>
+                <div class="profile-links" aria-label="Profile links">
+                    <a href="mailto:matteo.cavagnino.mc@gmail.com">Email</a>
+                    <a href="https://github.com/Teo7297" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/matteo-cavagnino/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+            <div class="hero-visual" aria-label="Portrait of Matteo Cavagnino">
+                <div class="portrait-frame"><img src="img/Portrait.png" alt="Matteo Cavagnino" width="770" height="770" fetchpriority="high"></div>
+                <div class="focus-card"><span>Core focus</span><strong>C++ · CUDA · Graphics</strong></div>
+            </div>
+        </section>
+
+        <section class="section experience" id="experience" aria-labelledby="experience-title">
+            <div class="section-heading"><p class="section-index">01 / Experience</p><h2 id="experience-title">Engineering across graphics, vision, and infrastructure.</h2></div>
+            <div class="timeline">
+                <article class="timeline-item current">
+                    <div class="timeline-date"><span>2025 — Present</span><small>Milano, Italy</small></div>
+                    <div class="timeline-content"><p class="company">MainStreaming</p><h3>CDN Engineer</h3><p>Developing performance and security features for content delivery infrastructure serving major streaming platforms, and deploying production code across servers and edge nodes.</p><ul class="tag-list" aria-label="Technologies"><li>C</li><li>C#</li><li>Lua</li><li>CMake</li><li>Linux</li></ul></div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-date"><span>2023 — 2025</span><small>Fagnano Olona, Italy</small></div>
+                    <div class="timeline-content"><p class="company">Acteon · De Götzen</p><h3>3D Computer Vision R&amp;D Engineer</h3><p>Built and optimized geometry-processing algorithms for an intraoral scanner, spanning mesh post-processing, bite registration, point-cloud preprocessing, and core data structures.</p><ul class="tag-list" aria-label="Technologies"><li>C++</li><li>CUDA</li><li>Qt</li><li>OpenGL</li><li>PCL</li><li>Eigen</li></ul></div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-date"><span>2022 — 2023</span><small>Sesto Calende, Italy</small></div>
+                    <div class="timeline-content"><p class="company">CAE</p><h3>Flight Simulators Software Engineer</h3><p>Worked on helicopter full-flight simulators, contributing to flight controls, electrical systems, and the real-time rendering engine.</p><ul class="tag-list" aria-label="Technologies"><li>C</li><li>C++</li><li>XML</li><li>Real-time systems</li></ul></div>
+                </article>
+                <article class="timeline-item compact">
+                    <div class="timeline-date"><span>2021</span><small>Lainate, Italy</small></div>
+                    <div class="timeline-content"><p class="company">Altea Federation · Alterna</p><h3>Software Developer Intern</h3><p>Completed a four-month internship working with Microsoft 365 and Dynamics ERP systems.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section projects" id="projects" aria-labelledby="projects-title">
+            <div class="section-heading split-heading"><div><p class="section-index">02 / Selected projects</p><h2 id="projects-title">Things I’ve designed, built, and shipped.</h2></div><p>Independent work exploring engine architecture, rendering, gameplay systems, and performance.</p></div>
+            <div class="project-grid">
+                <article class="project-card project-card-wide">
+                    <div class="project-art shak-art"><span class="project-number">01</span><img src="img/ShakEngineLogo.png" alt="ShakEngine logo" loading="lazy"></div>
+                    <div class="project-copy"><p class="project-type">Game engine · From scratch</p><h3>ShakEngine</h3><p>A modular 2D engine in C++ with an entity-component hierarchy, quadtree collision optimization, pooled objects, particle systems, hot-reloaded shaders, and automated asset packaging.</p><ul class="tag-list"><li>C++</li><li>OpenGL</li><li>SFML</li><li>CMake</li></ul><button class="text-button" type="button" data-project="ShakEngine">View case study <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-art zombie-art"><span class="project-number">02</span><img src="img/zombiePP.png" alt="Zombie++ game artwork" loading="lazy"></div>
+                    <div class="project-copy"><p class="project-type">3D game · Systems design</p><h3>Zombie++</h3><p>A complete first-person survival game with modular weapons and stats, multiple perks, and separated match, game-mode, and world systems.</p><ul class="tag-list"><li>Unity</li><li>C#</li><li>Gameplay systems</li></ul><button class="text-button" type="button" data-project="Zombie">View case study <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="project-card">
+                    <div class="project-art mars-art"><span class="project-number">03</span><img src="img/Mars_thumb.png" alt="Mars Marines game artwork" loading="lazy"></div>
+                    <div class="project-copy"><p class="project-type">Action game · Unreal Engine</p><h3>Mars Marines</h3><p>A top-down action shooter built to explore Unreal Engine 5 architecture, combining native C++ with Blueprint-driven gameplay.</p><ul class="tag-list"><li>Unreal Engine 5</li><li>C++</li><li>Blueprints</li></ul><button class="text-button" type="button" data-project="marsMarines">View case study <span aria-hidden="true">↗</span></button></div>
+                </article>
+                <article class="project-card project-card-wide project-card-horizontal">
+                    <div class="project-art opengl-art"><span class="project-number">04</span><img src="img/bloom.png" alt="Bloom rendering experiment" loading="lazy"></div>
+                    <div class="project-copy"><p class="project-type">Rendering · Learning project</p><h3>OpenGL renderer</h3><p>A ground-up graphics project covering buffers, shaders, materials, textures, lighting, transforms, collision, and batch rendering.</p><ul class="tag-list"><li>C++</li><li>OpenGL</li><li>GLSL</li><li>Dear ImGui</li></ul><button class="text-button" type="button" data-project="openGL">View case study <span aria-hidden="true">↗</span></button></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills" aria-labelledby="skills-title">
+            <div class="section-heading"><p class="section-index">03 / Technical profile</p><h2 id="skills-title">A low-level foundation with a broad engineering toolkit.</h2></div>
+            <div class="skill-groups">
+                <article><span class="group-number">01</span><h3>Core engineering</h3><p>C++, C, C#, Python, Java, data structures, software architecture, performance optimization</p></article>
+                <article><span class="group-number">02</span><h3>Graphics &amp; compute</h3><p>CUDA, OpenGL, GLSL, 3D computer vision, point clouds, mesh processing, PCL, Eigen</p></article>
+                <article><span class="group-number">03</span><h3>Tools &amp; platforms</h3><p>CMake, Git, Linux, Qt, Visual Studio, Unity, Unreal Engine, Dear ImGui</p></article>
+            </div>
+        </section>
+
+        <section class="section credentials" id="education" aria-labelledby="education-title">
+            <div class="section-heading"><p class="section-index">04 / Education &amp; research</p><h2 id="education-title">Computer science, from theory to applied research.</h2></div>
+            <div class="credential-grid">
+                <article class="credential-card featured"><p class="credential-meta">Master’s degree · 2022</p><h3>Computer Science</h3><p>Università degli Studi di Milano</p><div class="credential-note"><span>Research thesis</span><p>Security certification methodology for highly dynamic cloud and IoT architectures.</p><a href="https://github.com/Teo7297/Master-Degree-Thesis/blob/main/THESIS.pdf" target="_blank" rel="noopener noreferrer">Read on GitHub <span aria-hidden="true">↗</span></a></div></article>
+                <article class="credential-card"><p class="credential-meta">Bachelor’s degree · 2019</p><h3>Computer Science</h3><p>Università degli Studi dell’Insubria, Varese</p></article>
+                <article class="credential-card jam-card"><p class="credential-meta">Game jam · 72 hours</p><h3>Ads at War</h3><p>Built in C++ with ShakEngine. Placed 15th overall out of 116 entries and 8th for gameplay and fun.</p><a href="https://realishak.itch.io/ads-at-war" target="_blank" rel="noopener noreferrer">Play on itch.io <span aria-hidden="true">↗</span></a></article>
+            </div>
+        </section>
+
+        <section class="contact" aria-labelledby="contact-title"><p class="section-index">Let’s work together</p><h2 id="contact-title">Have an engineering challenge worth solving?</h2><p>I’m always glad to connect about software engineering, graphics, performance, and ambitious technical products.</p><a class="button button-light" href="mailto:matteo.cavagnino.mc@gmail.com">matteo.cavagnino.mc@gmail.com <span aria-hidden="true">↗</span></a></section>
+    </main>
+
+    <footer><a class="brand" href="#top" aria-label="Back to top">MC<span>.</span></a><p>Designed and built by Matteo Cavagnino.</p><a href="#top">Back to top ↑</a></footer>
+
+    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close project details">×</button>
+        <div class="dialog-content"><p class="project-type" id="dialog-kicker"></p><h2 id="dialog-title"></h2><p class="dialog-description" id="dialog-description"></p><div class="dialog-actions" id="dialog-actions"></div><div class="dialog-stack" id="dialog-stack"></div><div class="dialog-media" id="dialog-media"></div></div>
+    </dialog>
+</body>
+</html>
